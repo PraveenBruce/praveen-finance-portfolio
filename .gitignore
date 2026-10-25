@@ -1,0 +1,14 @@
+# OS & Editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+*~
+
+# Temporary scratch & build artifacts
+*.log
+.vscode/
+.idea/
+
+# Windows temp
+*.tmp

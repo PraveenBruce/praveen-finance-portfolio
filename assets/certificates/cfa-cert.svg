@@ -1,0 +1,109 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780">
+  <defs>
+    <linearGradient id="cfaParchment" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFBF7" />
+      <stop offset="50%" stop-color="#F7F3EA" />
+      <stop offset="100%" stop-color="#EFE9DC" />
+    </linearGradient>
+    <linearGradient id="cfaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="30%" stop-color="#FFF2B2" />
+      <stop offset="60%" stop-color="#AA771C" />
+      <stop offset="100%" stop-color="#805A12" />
+    </linearGradient>
+    <radialGradient id="cfaSealGrad" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFF5C0" />
+      <stop offset="35%" stop-color="#D4AF37" />
+      <stop offset="70%" stop-color="#9E6B15" />
+      <stop offset="100%" stop-color="#5C3B05" />
+    </radialGradient>
+    <filter id="cfaShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Parchment Base -->
+  <rect x="0" y="0" width="1100" height="780" rx="16" fill="url(#cfaParchment)" />
+  
+  <!-- Outer Gold Border -->
+  <rect x="24" y="24" width="1052" height="732" rx="10" fill="none" stroke="url(#cfaGold)" stroke-width="4" />
+  <rect x="34" y="34" width="1032" height="712" rx="6" fill="none" stroke="#2B2D42" stroke-width="1.2" stroke-dasharray="6,4" />
+  <rect x="42" y="42" width="1016" height="696" rx="4" fill="none" stroke="url(#cfaGold)" stroke-width="1.8" />
+
+  <!-- Corner Flourishes -->
+  <g stroke="url(#cfaGold)" stroke-width="2.5" fill="none">
+    <path d="M 46 76 L 76 46 M 46 66 L 66 46 M 46 56 L 56 46" />
+    <path d="M 1054 76 L 1024 46 M 1054 66 L 1034 46 M 1054 56 L 1044 46" />
+    <path d="M 46 704 L 76 734 M 46 714 L 66 734 M 46 724 L 56 734" />
+    <path d="M 1054 704 L 1024 734 M 1054 714 L 1034 734 M 1054 724 L 1044 734" />
+  </g>
+
+  <!-- Institute Crest / Emblem -->
+  <g transform="translate(550, 110)" text-anchor="middle">
+    <circle cx="0" cy="0" r="32" fill="none" stroke="url(#cfaGold)" stroke-width="2.5" />
+    <circle cx="0" cy="0" r="26" fill="#1A202C" />
+    <polygon points="0,-18 5,-6 18,-6 8,2 12,14 0,7 -12,14 -8,2 -18,-6 -5,-6" fill="url(#cfaGold)" />
+  </g>
+
+  <!-- Header Titles -->
+  <text x="550" y="172" font-family="'Georgia', serif" font-size="28" font-weight="bold" fill="#1A202C" text-anchor="middle" letter-spacing="4">CFA INSTITUTE</text>
+  <text x="550" y="196" font-family="'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="#718096" text-anchor="middle" letter-spacing="2">CHARLOTTESVILLE, VIRGINIA â€¢ GLOBAL ASSOCIATION OF INVESTMENT PROFESSIONALS</text>
+  
+  <line x1="320" y1="216" x2="780" y2="216" stroke="url(#cfaGold)" stroke-width="1.5" />
+  <circle cx="550" cy="216" r="4" fill="#D4AF37" />
+
+  <text x="550" y="248" font-family="'Georgia', serif" font-size="15" font-style="italic" fill="#4A5568" text-anchor="middle">Official Attestation of Candidacy &amp; Academic Standing</text>
+  <text x="550" y="286" font-family="'Georgia', serif" font-size="34" font-weight="bold" fill="#1A202C" text-anchor="middle" letter-spacing="2">CFAÂ® PROGRAM â€¢ LEVEL I CANDIDATE</text>
+
+  <text x="550" y="324" font-family="'Georgia', serif" font-size="14" fill="#718096" text-anchor="middle">This credential attests that</text>
+  
+  <!-- Candidate Name -->
+  <text x="550" y="375" font-family="'Georgia', serif" font-size="44" font-weight="bold" fill="#0F172A" text-anchor="middle" letter-spacing="3">PRAVEEN S</text>
+  <line x1="260" y1="392" x2="840" y2="392" stroke="#2B2D42" stroke-width="1" />
+
+  <!-- Curriculum & Citation -->
+  <text x="550" y="428" font-family="'Georgia', serif" font-size="14.5" fill="#334155" text-anchor="middle">has officially enrolled and established active candidacy in the Chartered Financial Analyst (CFAÂ®) Program,</text>
+  <text x="550" y="450" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">satisfying prerequisites across <tspan font-weight="bold">Ethical &amp; Professional Standards (GIPSÂ®)</tspan>, Financial Statement Analysis,</text>
+  <text x="550" y="472" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">Equity Asset Valuation, Fixed Income Securities, Quantitative Methods, and Corporate Issuers.</text>
+
+  <!-- Competencies Pills Banner -->
+  <g transform="translate(140, 502)">
+    <rect x="0" y="0" width="820" height="38" rx="8" fill="#F1EAD8" stroke="#D4AF37" stroke-width="1" />
+    <text x="410" y="24" font-family="'Helvetica Neue', sans-serif" font-size="11" font-weight="bold" fill="#4A5568" text-anchor="middle" letter-spacing="1">
+      10 CORE TOPICS â€¢ ETHICS (GIPSÂ®) â€¢ TARGET EXAM: NOVEMBER 2026 â€¢ CANDIDATE ID: CFA-2026-918
+    </text>
+  </g>
+
+  <!-- Signatures Block -->
+  <!-- Left Signature -->
+  <g transform="translate(240, 620)" text-anchor="middle">
+    <path d="M -90 -22 C -60 -45 -30 -10 0 -28 C 30 -42 60 -15 90 -25" fill="none" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#718096" stroke-width="1" />
+    <text x="0" y="18" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="#1A202C">Margaret Franklin, CFA</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="10.5" fill="#718096">President &amp; Chief Executive Officer</text>
+  </g>
+
+  <!-- Center Gold Embossed Medallion -->
+  <g transform="translate(550, 620)" filter="url(#cfaShadow)">
+    <path d="M -16 26 L -24 68 L -4 54 L 16 68 L 8 26 Z" fill="#9E6B15" />
+    <path d="M 0 26 L -8 72 L 12 56 L 32 72 L 24 26 Z" fill="#AA771C" />
+    <circle cx="0" cy="0" r="46" fill="url(#cfaSealGrad)" stroke="#FFE899" stroke-width="2" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#4A3205" stroke-width="1.5" stroke-dasharray="3,2" />
+    <text x="0" y="-12" font-family="'Georgia', serif" font-size="8.5" font-weight="bold" fill="#3D2802" text-anchor="middle" letter-spacing="1">CFA INSTITUTE</text>
+    <text x="0" y="8" font-family="'Georgia', serif" font-size="18" font-weight="bold" fill="#2E1C00" text-anchor="middle">VERIFIED</text>
+    <text x="0" y="24" font-family="'Georgia', serif" font-size="9" font-weight="bold" fill="#3D2802" text-anchor="middle">â˜… 2026 â˜…</text>
+  </g>
+
+  <!-- Right Signature -->
+  <g transform="translate(860, 620)" text-anchor="middle">
+    <path d="M -85 -18 C -50 -40 -20 -15 10 -30 C 40 -40 70 -12 85 -20" fill="none" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#718096" stroke-width="1" />
+    <text x="0" y="18" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="#1A202C">Stephen M. Horan, PhD, CFA</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="10.5" fill="#718096">Managing Director, Credentialing</text>
+  </g>
+
+  <!-- Security Footer -->
+  <text x="80" y="724" font-family="'Courier New', monospace" font-size="10" fill="#718096">DOCUMENT ID: CFA-2026-918</text>
+  <text x="550" y="724" font-family="'Courier New', monospace" font-size="10" fill="#718096" text-anchor="middle">VERIFICATION HASH: 9B2D8A41E8C2</text>
+  <text x="1020" y="724" font-family="'Courier New', monospace" font-size="10" fill="#718096" text-anchor="end">CFAINSTITUTE.ORG/VERIFY</text>
+</svg>

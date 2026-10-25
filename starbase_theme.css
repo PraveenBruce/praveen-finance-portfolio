@@ -1,0 +1,3243 @@
+/* ==========================================================================
+   MINIMALIST STARBASE / ARCHITECTURAL DRAFTING NEO-BENTO THEME
+   Inspired by Reference Images:
+   - Clean Architectural Studio Gray Canvas (#EAECF0 / #ECEEF2)
+   - Signature Folder-Tab Notched Cards (Images 1, 2, 3)
+   - High-Contrast Matte Black, Starbase Emerald, Flame Coral & Titanium White
+   - Floating 3D Finance Coin with Architectural Drafting Compass Curves
+   - Swiss 8-Card Executive Summary Bento Grid (Image 4)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --sb-bg: #EAECF0;
+  --sb-bg-subtle: #E2E5EB;
+  --sb-surface: #FFFFFF;
+  --sb-surface-muted: #F4F6F8;
+  --sb-black: #0E0F14;
+  --sb-black-card: #121319;
+  --sb-black-border: #232530;
+  --sb-border: #D6DAE2;
+  --sb-border-subtle: #E4E7EE;
+  --sb-border-dark: rgba(0, 0, 0, 0.08);
+  
+  /* Accent Colors from the Reference Images */
+  --sb-emerald: #00A86B;
+  --sb-emerald-dark: #008756;
+  --sb-emerald-glow: rgba(0, 168, 107, 0.25);
+  --sb-coral: #FF4A22;
+  --sb-coral-hover: #E83E17;
+  --sb-coral-glow: rgba(255, 74, 34, 0.28);
+  
+  /* Text */
+  --sb-text-main: #0E0F14;
+  --sb-text-body: #4B5262;
+  --sb-text-muted: #788094;
+  --sb-text-light: #9DA4B6;
+  --sb-text-inv: #FFFFFF;
+  --sb-text-inv-muted: #A3A8B8;
+
+  /* Typography */
+  --sb-font-display: 'Chakra Petch', 'Space Grotesk', -apple-system, sans-serif;
+  --sb-font-body: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sb-font-mono: 'Space Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Base Canvas with Architectural Drafting Grid & Quadrant Lines (Image 3) */
+html, body {
+  background-color: var(--sb-bg) !important;
+  color: var(--sb-text-main) !important;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body.starbase-ui {
+  background-color: var(--sb-bg);
+  background-image: 
+    radial-gradient(circle at 75% 260px, rgba(14, 15, 20, 0.045) 0, rgba(14, 15, 20, 0.045) 340px, transparent 341px),
+    radial-gradient(circle at 75% 260px, rgba(14, 15, 20, 0.035) 0, rgba(14, 15, 20, 0.035) 520px, transparent 521px),
+    linear-gradient(to right, rgba(14, 15, 20, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 15, 20, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  background-position: 0 0, 0 0, 0 0, 0 0;
+  font-family: var(--sb-font-body);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* FIXED 3D FINANCE COIN AMBIENT BACKGROUND */
+.cg-fixed-coin-bg {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  z-index: 1 !important;
+  display: block !important;
+}
+
+/* Master Grid Container */
+.sb-container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 10;
+}
+
+/* 1. TOP NAVBAR (Minimalist Starbase Style) */
+.sb-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  margin: 12px auto 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--sb-border);
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 14px;
+  z-index: 100;
+}
+
+.sb-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.sb-brand-mark {
+  width: 26px;
+  height: 26px;
+  background: var(--sb-black);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.sb-brand-name {
+  font-family: var(--sb-font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--sb-black);
+  text-transform: uppercase;
+}
+
+.sb-brand-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--sb-coral);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sb-brand-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  background: var(--sb-bg);
+  border: 1px solid var(--sb-border);
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: var(--sb-text-body);
+}
+
+.sb-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.sb-nav-link {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.16s ease;
+  padding: 4px 0;
+}
+
+.sb-nav-link:hover,
+.sb-nav-link.active {
+  color: var(--sb-black);
+}
+
+.sb-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sb-pill-badge {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--sb-border);
+  background: var(--sb-surface);
+  color: var(--sb-text-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sb-pill-badge-emerald {
+  border-color: rgba(0, 168, 107, 0.4);
+  background: rgba(0, 168, 107, 0.08);
+  color: var(--sb-emerald-dark);
+}
+
+.sb-btn-black-pill {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--sb-black);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.18s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.sb-btn-black-pill:hover {
+  background: #252834;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Hamburger Menu Toggle Button (Default Hidden on Desktop) */
+.sb-mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--sb-border);
+  background: var(--sb-surface);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  z-index: 102;
+}
+
+.sb-hamburger-bar {
+  width: 17px;
+  height: 2px;
+  background: var(--sb-black);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* 2. ARCHITECTURAL HERO SECTION (Clean, Minimalist Layout with Open 3D Coin) */
+.sb-hero-stage {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.sb-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 520px) 1fr;
+  align-items: center;
+  gap: 36px;
+  min-height: 640px;
+}
+
+/* Left Hero Column: Compact Architectural White Card */
+.sb-hero-card-left {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--sb-border);
+  border-radius: 28px;
+  padding: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 640px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Corner Crosses for the Card */
+.sb-corner-cross {
+  position: absolute;
+  font-family: var(--sb-font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sb-coral);
+  pointer-events: none;
+  user-select: none;
+  z-index: 15;
+}
+
+.sb-corner-tl { top: 16px; left: 18px; }
+.sb-corner-tr { top: 16px; right: 18px; }
+.sb-corner-bl { bottom: 16px; left: 18px; }
+.sb-corner-br { bottom: 16px; right: 18px; }
+
+/* Top Status Row inside Card */
+.sb-hero-top-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 6px;
+}
+
+/* 1. Giant Monumental Watermark Text Behind Praveen's Image */
+.sb-hero-bg-monumental-text {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1; /* Placed behind the portrait image at z-index: 2 */
+  line-height: 0.86;
+  text-align: center;
+}
+
+.sb-hero-bg-monumental-text span {
+  font-family: var(--sb-font-display);
+  font-size: clamp(48px, 6vw, 68px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: rgba(14, 16, 21, 0.18); /* Darker, clearly visible architectural watermark */
+  white-space: nowrap;
+}
+
+/* 2. Full Image Layer: Centered and showing entire body */
+.sb-hero-full-photo-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.sb-hero-full-photo-img {
+  height: 100%;
+  max-height: 640px;
+  width: auto;
+  object-fit: contain;
+  object-position: top center;
+  filter: contrast(1.02) saturate(1.02); /* Upper half 100% sharp and clear */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Transition Blur Pane: Very light reduced blur across second half of body only */
+.sb-hero-lower-body-blur-pane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 52%; /* Begins at waist: upper body 100% sharp, lower body gently transitions into very light blur */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;
+  z-index: 3;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 22%, black 60%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.25) 22%, black 60%, black 100%);
+}
+
+/* 3. Description Card: Sleek Floating Architectural White Card */
+.sb-hero-desc-card {
+  position: relative;
+  z-index: 10;
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(14, 16, 21, 0.12);
+  border-radius: 12px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.sb-hero-desc-card .sb-hero-big-title {
+  font-family: var(--sb-font-display);
+  font-size: clamp(28px, 3.2vw, 36px);
+  font-weight: 900;
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: #000000; /* Pure Jet Black */
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.sb-hero-desc-card .sb-hero-big-title span.sb-dot-accent {
+  color: var(--sb-coral);
+}
+
+.sb-hero-desc-card .sb-hero-desc {
+  font-family: var(--sb-font-body);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.62;
+  color: #0F1218; /* Solid, crisp dark charcoal black */
+  margin: 0 0 12px;
+  max-width: 100%;
+}
+
+.sb-hero-desc-card .sb-hero-desc strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+.sb-hero-desc-card .sb-hero-strengths-plain {
+  margin-top: 6px;
+  font-family: var(--sb-font-mono);
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: #08090C;
+  padding-top: 10px;
+  border-top: 1px solid rgba(14, 16, 21, 0.10);
+}
+
+.sb-hero-desc-card .sb-strengths-label {
+  font-weight: 800;
+  color: #E03616;
+  letter-spacing: 0.08em;
+  margin-right: 6px;
+  display: inline-block;
+}
+
+.sb-hero-desc-card .sb-strengths-body {
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Stack of Outlined Pills (Inspired by Image 1) */
+.sb-pill-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.sb-skill-pill {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--sb-text-body);
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: all 0.16s ease;
+  user-select: none;
+}
+
+.sb-skill-pill:hover {
+  border-color: var(--sb-black);
+  color: var(--sb-black);
+  transform: translateY(-1px);
+}
+
+/* Right Hero Column: The Floating 3D Coin Stage & Circular CTA Button (Image 3) */
+.sb-hero-right {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -32px; /* Lift coin stage higher so it stays comfortably in the viewport frame */
+}
+
+/* Architectural Drafting Circles around the 3D Coin */
+.sb-drafting-ring {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.sb-ring-outer {
+  width: min(420px, 85vw);
+  height: min(420px, 85vw);
+  border: 1px dashed rgba(14, 15, 20, 0.13);
+}
+
+.sb-ring-inner {
+  width: min(300px, 60vw);
+  height: min(300px, 60vw);
+  border-style: dotted;
+  border-color: rgba(14, 15, 20, 0.10);
+}
+
+/* 3D Coin Interactive Grab Overlay */
+.sb-coin-interactive-overlay {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, 85vw);
+  height: min(420px, 85vw);
+  border-radius: 50%;
+  pointer-events: auto;
+  z-index: 25;
+  cursor: grab;
+  touch-action: none;
+}
+
+.sb-coin-interactive-overlay:active,
+.sb-coin-interactive-overlay.dragging {
+  cursor: grabbing;
+}
+
+/* Floating Flame-Coral Circular CTA Button (Image 3) */
+.sb-circle-cta-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: var(--sb-coral);
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.3;
+  box-shadow: 0 12px 30px var(--sb-coral-glow);
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 30;
+  pointer-events: auto;
+}
+
+.sb-circle-cta-btn:hover {
+  transform: scale(1.08) rotate(4deg);
+  background: var(--sb-coral-hover);
+  box-shadow: 0 16px 36px rgba(255, 74, 34, 0.45);
+}
+
+.sb-circle-cta-arrow {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: transform 0.2s ease;
+}
+
+.sb-circle-cta-btn:hover .sb-circle-cta-arrow {
+  transform: translate(2px, 2px);
+}
+
+/* Coin Interaction Controls & Hint */
+.sb-coin-controls-row {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 30;
+  pointer-events: auto;
+}
+
+.sb-coin-mini-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--sb-border);
+  color: var(--sb-black);
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.16s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.sb-coin-mini-btn:hover {
+  background: var(--sb-black);
+  color: #FFFFFF;
+  border-color: var(--sb-black);
+  transform: translateY(-1px);
+}
+
+/* 3. HERO BOTTOM ROW: 4 SIGNATURE FOLDER-TAB CARDS (Images 2 & 3) */
+.sb-hero-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* Signature Folder-Tab Card Base */
+.sb-tab-card {
+  position: relative;
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  border-radius: 20px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.sb-tab-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-color: #B8BFCB;
+}
+
+/* Folder-Tab Stepped Header (Image 2 & 3) */
+.sb-card-tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sb-border-subtle);
+}
+
+.sb-card-index {
+  font-family: var(--sb-font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+}
+
+.sb-card-status-pill {
+  font-family: var(--sb-font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--sb-border);
+  background: var(--sb-bg);
+  color: var(--sb-text-body);
+  text-transform: uppercase;
+}
+
+.sb-tab-card-title {
+  font-family: var(--sb-font-display);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--sb-black);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.sb-tab-card-desc {
+  font-family: var(--sb-font-body);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--sb-text-body);
+  margin: 0 0 14px;
+}
+
+.sb-tab-card-link {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--sb-black);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.16s ease, transform 0.16s ease;
+}
+
+.sb-tab-card-link:hover {
+  color: var(--sb-coral);
+  transform: translateX(2px);
+}
+
+/* Card Variant: Starbase Emerald Green (Image 2) */
+.sb-tab-card-emerald {
+  background: var(--sb-emerald);
+  border-color: var(--sb-emerald);
+  color: #FFFFFF;
+}
+
+.sb-tab-card-emerald .sb-card-tab-header {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.sb-tab-card-emerald .sb-card-index {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sb-tab-card-emerald .sb-card-status-pill {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+}
+
+.sb-tab-card-emerald .sb-tab-card-title {
+  color: #FFFFFF;
+}
+
+.sb-tab-card-emerald .sb-tab-card-desc {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.sb-tab-card-emerald .sb-tab-card-link {
+  color: #FFFFFF;
+}
+
+/* Giant Number Display in Emerald Card (Image 2) */
+.sb-emerald-big-num {
+  font-family: var(--sb-font-display);
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+/* Card Variant: Stark Matte Black (Image 2 & 3 Card 04) */
+.sb-tab-card-black {
+  background: var(--sb-black);
+  border-color: var(--sb-black-border);
+  color: #FFFFFF;
+}
+
+.sb-tab-card-black .sb-card-tab-header {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.sb-tab-card-black .sb-card-index {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sb-tab-card-black .sb-card-status-pill {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+.sb-tab-card-black .sb-tab-card-title {
+  color: #FFFFFF;
+}
+
+.sb-tab-card-black .sb-tab-card-desc {
+  color: var(--sb-text-inv-muted);
+}
+
+.sb-tab-card-black .sb-tab-card-link {
+  color: var(--sb-coral);
+}
+
+/* 4. SWISS BENTO EXECUTIVE SUMMARY (8-CARD GRID - Image 4) */
+.sb-section-header-block {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 48px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sb-border);
+}
+
+.sb-section-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--sb-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sb-section-title {
+  font-family: var(--sb-font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--sb-black);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sb-swiss-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.sb-swiss-card {
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  border-radius: 20px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.sb-swiss-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.sb-swiss-card-dark {
+  background: var(--sb-black);
+  border-color: var(--sb-black-border);
+  color: #FFFFFF;
+}
+
+.sb-swiss-card-dark .sb-swiss-title,
+.sb-swiss-card-dark .sb-swiss-bignum {
+  color: #FFFFFF;
+}
+
+.sb-swiss-card-dark .sb-swiss-body {
+  color: var(--sb-text-inv-muted);
+}
+
+.sb-swiss-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sb-swiss-bignum {
+  font-family: var(--sb-font-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--sb-black);
+}
+
+.sb-circle-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.16s ease, background 0.16s ease;
+}
+
+.sb-circle-arrow-btn:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.sb-swiss-title {
+  font-family: var(--sb-font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--sb-black);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.sb-swiss-body {
+  font-family: var(--sb-font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--sb-text-body);
+  margin: 0 0 14px;
+}
+
+/* Fact Input Checkmarks (Image 4) */
+.sb-fact-pills-row {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.sb-fact-pill {
+  flex: 1;
+  background: var(--sb-surface-muted);
+  border: 1px solid var(--sb-border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--sb-black);
+}
+
+.sb-fact-check {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--sb-black);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+}
+
+/* Minimalist Numeric Metrics Row (Image 4: 3k, 06, 45) */
+.sb-metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  border-top: 1px solid var(--sb-border-subtle);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.sb-metric-cell {
+  text-align: left;
+}
+
+.sb-metric-lbl {
+  font-family: var(--sb-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+  text-transform: uppercase;
+  display: block;
+}
+
+.sb-metric-val {
+  font-family: var(--sb-font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--sb-black);
+  display: block;
+}
+
+/* 5. CERTIFICATIONS SECTION (STARBASE FOLDER TABS - Image 2) */
+.sb-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.sb-cert-folder-card {
+  position: relative;
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  border-radius: 22px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 290px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.sb-cert-folder-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  border-color: #B5BCC8;
+}
+
+.sb-cert-tab-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.sb-cert-index-stamp {
+  font-family: var(--sb-font-mono);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--sb-black);
+}
+
+.sb-cert-remote-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--sb-border);
+  background: var(--sb-surface-muted);
+  color: var(--sb-text-body);
+}
+
+.sb-cert-issuer-label {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.sb-cert-card-title {
+  font-family: var(--sb-font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--sb-black);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.sb-cert-card-desc {
+  font-family: var(--sb-font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--sb-text-body);
+  margin: 0 0 16px;
+}
+
+.sb-cert-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.sb-cert-topic-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  background: var(--sb-surface-muted);
+  border: 1px solid var(--sb-border-subtle);
+  color: var(--sb-text-body);
+}
+
+.sb-cert-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid var(--sb-border-subtle);
+  margin-top: auto;
+}
+
+.sb-cert-reg-code {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+}
+
+.sb-cert-open-btn {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--sb-black);
+  color: #FFFFFF;
+  border: 1px solid var(--sb-black);
+  padding: 7px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.16s ease;
+}
+
+.sb-cert-open-btn:hover {
+  background: var(--sb-coral);
+  border-color: var(--sb-coral);
+  box-shadow: 0 4px 14px var(--sb-coral-glow);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   6. PORTFOLIO SHOWCASE: ARCHITECTURAL SINGLE FILE FOLDER ("like the files...")
+   All 6 projects housed under ONE unified dossier folder with top rim tabs
+   ========================================================================== */
+.sb-portfolio-files-section {
+  position: relative;
+  margin-bottom: 56px;
+  padding: 12px 0 24px;
+}
+
+.sb-master-folder-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+}
+
+/* Master Stepped Tab Bar along top rim */
+.sb-master-tab-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -1.5px; /* Overlaps folder top border by exactly 1.5px */
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 0; /* ZERO padding! Flush with the left and right */
+  width: 100%;
+}
+
+.sb-master-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Tab Button on top rim */
+.sb-master-tab-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.sb-master-tab-btn:hover:not(.active) {
+  transform: translateY(-3px);
+}
+
+.sb-master-tab-btn.active {
+  z-index: 25 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* First tab button: 100% flush with folder left border */
+.sb-master-tab-btn:first-child {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.sb-master-tab-btn:not(:first-child) {
+  margin-left: -5px; /* Interlocks cleanly along folder rim */
+}
+
+/* Architectural File Folder Tab Inner Badge */
+.sb-tab-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px 10px 18px;
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  user-select: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+/* Tab 1: File tab with vertical left edge flush with folder, angled 45deg right chamfer */
+.sb-master-tab-btn:first-child .sb-tab-inner {
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 100%, 0 100%);
+  padding-left: 18px;
+  padding-right: 26px;
+  border-left: 1.5px solid transparent;
+}
+
+/* Tabs 2 - 6: True File Folder Tabs with angled 45deg chamfers on BOTH left and right */
+.sb-master-tab-btn:not(:first-child) .sb-tab-inner {
+  clip-path: polygon(15px 0, calc(100% - 15px) 0, 100% 100%, 0 100%);
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.sb-tab-label {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.sb-tab-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+/* ACTIVE TAB: Attached seamlessly to the project folder card with ZERO gap or line */
+.sb-master-tab-btn.active .sb-tab-inner {
+  padding-bottom: 14px !important;
+  margin-bottom: -2px !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   PASTEL COLOR THEMES FOR SINGLE MASTER FILE FOLDER & TABS
+   Tabs are 100% solid, fully visible, and match their respective file color.
+   Active tab is seamlessly attached to the file folder below.
+   ========================================================================== */
+
+/* 1. Pastel Blue (Project 01: Quant SVI Surface) */
+.sb-tab-pastel-blue .sb-tab-inner {
+  background: #D6E6F9;
+  color: #0C1E3C;
+  border-top: 1.5px solid #A4CAFB;
+}
+.sb-tab-pastel-blue:first-child .sb-tab-inner {
+  border-left: 1.5px solid #A4CAFB;
+}
+.sb-tab-pastel-blue .sb-tab-tag {
+  color: #1E3A8A;
+}
+.sb-tab-pastel-blue.active .sb-tab-inner {
+  background: #E8F1FC !important;
+  color: #0C1E3C !important;
+  border-top: 1.5px solid #A4CAFB !important;
+}
+.sb-tab-pastel-blue:first-child.active .sb-tab-inner {
+  border-left: 1.5px solid #A4CAFB !important;
+}
+.theme-pastel-blue {
+  background: #E8F1FC !important;
+  border-color: #A4CAFB !important;
+  box-shadow: 0 24px 64px rgba(37, 99, 235, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-blue .sb-folder-meta { color: #1E3A8A; }
+.theme-pastel-blue .sb-folder-dot { background: #2563EB; box-shadow: 0 0 8px #2563EB; }
+.theme-pastel-blue .sb-folder-title { color: #0C1E3C; }
+.theme-pastel-blue .sb-folder-desc { color: #2D3E56; }
+.theme-pastel-blue .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(147, 197, 253, 0.65); }
+.theme-pastel-blue .sb-kpi-lbl { color: #4B6382; }
+.theme-pastel-blue .sb-kpi-val { color: #0C1E3C; }
+.theme-pastel-blue .sb-folder-view-btn { color: #0C1E3C; }
+
+/* 2. Pastel Manila / Butter Yellow (Project 02: Enterprise SaaS M&A) */
+.sb-tab-pastel-yellow .sb-tab-inner {
+  background: #FCEAB0;
+  color: #2A1A02;
+  border-top: 1.5px solid #FCD34D;
+}
+.sb-tab-pastel-yellow .sb-tab-tag {
+  color: #854D0E;
+}
+.sb-tab-pastel-yellow.active .sb-tab-inner {
+  background: #FEF3C7 !important;
+  color: #2A1A02 !important;
+  border-top: 1.5px solid #FCD34D !important;
+}
+.theme-pastel-yellow {
+  background: #FEF3C7 !important;
+  border-color: #FCD34D !important;
+  box-shadow: 0 24px 64px rgba(217, 119, 6, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-yellow .sb-folder-meta { color: #854D0E; }
+.theme-pastel-yellow .sb-folder-dot { background: #D97706; box-shadow: 0 0 8px #D97706; }
+.theme-pastel-yellow .sb-folder-title { color: #2A1A02; }
+.theme-pastel-yellow .sb-folder-desc { color: #443419; }
+.theme-pastel-yellow .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(252, 211, 77, 0.65); }
+.theme-pastel-yellow .sb-kpi-lbl { color: #6E5325; }
+.theme-pastel-yellow .sb-kpi-val { color: #2A1A02; }
+.theme-pastel-yellow .sb-folder-view-btn { color: #2A1A02; }
+
+/* 3. Pastel Mint / Sage (Project 03: Hyperscale LBO) */
+.sb-tab-pastel-mint .sb-tab-inner {
+  background: #C7F3D6;
+  color: #043627;
+  border-top: 1.5px solid #86EFAC;
+}
+.sb-tab-pastel-mint .sb-tab-tag {
+  color: #065F46;
+}
+.sb-tab-pastel-mint.active .sb-tab-inner {
+  background: #DCFCE7 !important;
+  color: #043627 !important;
+  border-top: 1.5px solid #86EFAC !important;
+}
+.theme-pastel-mint {
+  background: #DCFCE7 !important;
+  border-color: #86EFAC !important;
+  box-shadow: 0 24px 64px rgba(16, 185, 129, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-mint .sb-folder-meta { color: #065F46; }
+.theme-pastel-mint .sb-folder-dot { background: #059669; box-shadow: 0 0 8px #059669; }
+.theme-pastel-mint .sb-folder-title { color: #043627; }
+.theme-pastel-mint .sb-folder-desc { color: #1B4536; }
+.theme-pastel-mint .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(110, 231, 183, 0.65); }
+.theme-pastel-mint .sb-kpi-lbl { color: #2E6552; }
+.theme-pastel-mint .sb-kpi-val { color: #043627; }
+.theme-pastel-mint .sb-folder-view-btn { color: #043627; }
+
+/* 4. Pastel Peach / Apricot (Project 04: Fed Repo Liquidity) */
+.sb-tab-pastel-peach .sb-tab-inner {
+  background: #FEDCC0;
+  color: #371206;
+  border-top: 1.5px solid #FDBA74;
+}
+.sb-tab-pastel-peach .sb-tab-tag {
+  color: #9A3412;
+}
+.sb-tab-pastel-peach.active .sb-tab-inner {
+  background: #FFEDD5 !important;
+  color: #371206 !important;
+  border-top: 1.5px solid #FDBA74 !important;
+}
+.theme-pastel-peach {
+  background: #FFEDD5 !important;
+  border-color: #FDBA74 !important;
+  box-shadow: 0 24px 64px rgba(234, 88, 12, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-peach .sb-folder-meta { color: #9A3412; }
+.theme-pastel-peach .sb-folder-dot { background: #EA580C; box-shadow: 0 0 8px #EA580C; }
+.theme-pastel-peach .sb-folder-title { color: #371206; }
+.theme-pastel-peach .sb-folder-desc { color: #572A17; }
+.theme-pastel-peach .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(253, 186, 116, 0.65); }
+.theme-pastel-peach .sb-kpi-lbl { color: #7E4228; }
+.theme-pastel-peach .sb-kpi-val { color: #371206; }
+.theme-pastel-peach .sb-folder-view-btn { color: #371206; }
+
+/* 5. Pastel Lavender / Lilac (Project 05: Clean Energy PPA) */
+.sb-tab-pastel-lavender .sb-tab-inner {
+  background: #E1D6FC;
+  color: #230B4F;
+  border-top: 1.5px solid #C4B5FD;
+}
+.sb-tab-pastel-lavender .sb-tab-tag {
+  color: #6D28D9;
+}
+.sb-tab-pastel-lavender.active .sb-tab-inner {
+  background: #EDE9FE !important;
+  color: #230B4F !important;
+  border-top: 1.5px solid #C4B5FD !important;
+}
+.theme-pastel-lavender {
+  background: #EDE9FE !important;
+  border-color: #C4B5FD !important;
+  box-shadow: 0 24px 64px rgba(124, 58, 237, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-lavender .sb-folder-meta { color: #6D28D9; }
+.theme-pastel-lavender .sb-folder-dot { background: #7C3AED; box-shadow: 0 0 8px #7C3AED; }
+.theme-pastel-lavender .sb-folder-title { color: #230B4F; }
+.theme-pastel-lavender .sb-folder-desc { color: #432E6A; }
+.theme-pastel-lavender .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(196, 181, 253, 0.65); }
+.theme-pastel-lavender .sb-kpi-lbl { color: #644991; }
+.theme-pastel-lavender .sb-kpi-val { color: #230B4F; }
+.theme-pastel-lavender .sb-folder-view-btn { color: #230B4F; }
+
+/* 6. Pastel Rose / Coral Blush (Project 06: Foundry Semis DCF) */
+.sb-tab-pastel-rose .sb-tab-inner {
+  background: #FDD1D7;
+  color: #3C0412;
+  border-top: 1.5px solid #FDA4AF;
+}
+.sb-tab-pastel-rose .sb-tab-tag {
+  color: #BE123C;
+}
+.sb-tab-pastel-rose.active .sb-tab-inner {
+  background: #FFE4E6 !important;
+  color: #3C0412 !important;
+  border-top: 1.5px solid #FDA4AF !important;
+}
+.theme-pastel-rose {
+  background: #FFE4E6 !important;
+  border-color: #FDA4AF !important;
+  box-shadow: 0 24px 64px rgba(225, 29, 72, 0.12), 0 2px 10px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-pastel-rose .sb-folder-meta { color: #BE123C; }
+.theme-pastel-rose .sb-folder-dot { background: #E11D48; box-shadow: 0 0 8px #E11D48; }
+.theme-pastel-rose .sb-folder-title { color: #3C0412; }
+.theme-pastel-rose .sb-folder-desc { color: #5C1D2D; }
+.theme-pastel-rose .sb-folder-kpi { background: rgba(255, 255, 255, 0.9); border-color: rgba(253, 164, 175, 0.65); }
+.theme-pastel-rose .sb-kpi-lbl { color: #87364B; }
+.theme-pastel-rose .sb-kpi-val { color: #3C0412; }
+.theme-pastel-rose .sb-folder-view-btn { color: #3C0412; }
+
+/* Single Master File Folder Card (Default Pastel Transition Container) */
+.sb-single-file-folder {
+  position: relative;
+  width: 100%;
+  border-radius: 14px 18px 18px 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.16), 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 40px 44px;
+  z-index: 1;
+  min-height: 440px;
+  overflow: hidden;
+  transition: background-color 0.32s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.32s ease, box-shadow 0.32s ease;
+}
+
+.sb-single-file-folder.sb-tab-0-active {
+  border-top-left-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .sb-single-file-folder {
+    padding: 24px 20px;
+    border-radius: 12px 14px 14px 14px;
+  }
+  .sb-single-file-folder.sb-tab-0-active {
+    border-top-left-radius: 0 !important;
+  }
+}
+
+/* Project Panels inside Master Folder */
+.sb-folder-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.26s cubic-bezier(0.16, 1, 0.3, 1), transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sb-folder-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  animation: sbFolderFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sbFolderFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2-Column Responsive Layout */
+.sb-folder-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+@media (max-width: 960px) {
+  .sb-folder-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Folder Typography & Left Details */
+.sb-folder-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.sb-folder-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.sb-folder-title {
+  font-family: var(--sb-font-display);
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.sb-folder-desc {
+  font-family: var(--sb-font-body);
+  font-size: 14px;
+  line-height: 1.62;
+  margin: 0 0 22px;
+  max-width: 520px;
+}
+
+/* Metrics Row */
+.sb-folder-kpis {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.sb-folder-kpi {
+  padding: 8px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.sb-kpi-lbl {
+  font-family: var(--sb-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.sb-kpi-val {
+  font-family: var(--sb-font-mono);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* Action Link ("VIEW PROJECT >") */
+.sb-folder-action {
+  display: flex;
+  align-items: center;
+}
+
+.sb-folder-view-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--sb-font-mono);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  transition: all 0.2s ease;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.sb-folder-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.sb-folder-view-btn:hover .sb-folder-arrow {
+  transform: translateX(5px);
+}
+
+/* Right Column: Taped Document Preview Sheet */
+.sb-folder-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 14px 10px;
+}
+
+.sb-taped-sheet {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #111317;
+  color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24), 0 2px 8px rgba(0, 0, 0, 0.12);
+  transform: rotate(-1deg);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.sb-file-folder:hover .sb-taped-sheet {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.34);
+}
+
+/* 4 Realistic Translucent White Masking Tape Corners */
+.sb-tape {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+  z-index: 10;
+  border-left: 1px dashed rgba(0, 0, 0, 0.15);
+  border-right: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.sb-tape-tl {
+  top: -8px;
+  left: -12px;
+  transform: rotate(-22deg);
+}
+
+.sb-tape-tr {
+  top: -8px;
+  right: -12px;
+  transform: rotate(22deg);
+}
+
+.sb-tape-bl {
+  bottom: -8px;
+  left: -12px;
+  transform: rotate(22deg);
+}
+
+.sb-tape-br {
+  bottom: -8px;
+  right: -12px;
+  transform: rotate(-22deg);
+}
+
+/* Inner Sheet Elements */
+.sb-sheet-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sb-sheet-id {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+
+.sb-sheet-status {
+  font-family: var(--sb-font-mono);
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+  letter-spacing: 0.06em;
+}
+
+.sb-sheet-chart-wrap {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.sb-sheet-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sb-sheet-meta-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  opacity: 0.75;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   COLOR SCHEMES FOR INDIVIDUAL DOSSIER FOLDERS
+   ========================================================================== */
+
+/* 1. Black Folder (Obsidian Carbon - Image 1 Style) */
+.sb-folder-black .sb-folder-tab,
+.sb-folder-black .sb-folder-body {
+  background: #111317;
+  color: #FFFFFF;
+}
+.sb-folder-black .sb-folder-dot { background: #38BDF8; box-shadow: 0 0 8px #38BDF8; }
+.sb-folder-black .sb-folder-title { color: #FFFFFF; }
+.sb-folder-black .sb-folder-desc { color: #B4BAC7; }
+.sb-folder-black .sb-folder-kpi { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.10); }
+.sb-folder-black .sb-kpi-val { color: #FFFFFF; }
+.sb-folder-black .sb-folder-view-btn { color: #FFFFFF; }
+.sb-folder-black .sb-taped-sheet { background: #181A22; border: 1px solid rgba(255, 255, 255, 0.14); color: #FFFFFF; }
+
+/* 2. Yellow Folder (Warm Manila Ochre / Financial Gold - Image 2 Style) */
+.sb-folder-yellow .sb-folder-tab,
+.sb-folder-yellow .sb-folder-body {
+  background: #E5A835;
+  color: #0E1015;
+}
+.sb-folder-yellow .sb-folder-dot { background: #0E1015; }
+.sb-folder-yellow .sb-folder-title { color: #0E1015; }
+.sb-folder-yellow .sb-folder-desc { color: #2D271E; font-weight: 500; }
+.sb-folder-yellow .sb-folder-kpi { background: rgba(0, 0, 0, 0.08); border: 1px solid rgba(0, 0, 0, 0.14); }
+.sb-folder-yellow .sb-kpi-lbl { color: #4A3E2C; }
+.sb-folder-yellow .sb-kpi-val { color: #0E1015; }
+.sb-folder-yellow .sb-folder-view-btn { color: #0E1015; }
+.sb-folder-yellow .sb-taped-sheet { background: #111317; border: 1px solid rgba(0, 0, 0, 0.25); color: #FFFFFF; }
+
+/* 3. Forest Folder (Deep Terminal Emerald) */
+.sb-folder-forest .sb-folder-tab,
+.sb-folder-forest .sb-folder-body {
+  background: #122B20;
+  color: #FFFFFF;
+}
+.sb-folder-forest .sb-folder-dot { background: #34D399; box-shadow: 0 0 8px #34D399; }
+.sb-folder-forest .sb-folder-title { color: #FFFFFF; }
+.sb-folder-forest .sb-folder-desc { color: #A7C5B5; }
+.sb-folder-forest .sb-folder-kpi { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.10); }
+.sb-folder-forest .sb-kpi-val { color: #34D399; }
+.sb-folder-forest .sb-folder-view-btn { color: #FFFFFF; }
+.sb-folder-forest .sb-taped-sheet { background: #0C1E16; border: 1px solid rgba(52, 211, 153, 0.2); color: #FFFFFF; }
+
+/* 4. Kraft Folder (Warm Sandstone Kraft) */
+.sb-folder-kraft .sb-folder-tab,
+.sb-folder-kraft .sb-folder-body {
+  background: #D8CCBB;
+  color: #0E1015;
+}
+.sb-folder-kraft .sb-folder-dot { background: #0E1015; }
+.sb-folder-kraft .sb-folder-title { color: #0E1015; }
+.sb-folder-kraft .sb-folder-desc { color: #302B24; font-weight: 500; }
+.sb-folder-kraft .sb-folder-kpi { background: rgba(0, 0, 0, 0.07); border: 1px solid rgba(0, 0, 0, 0.12); }
+.sb-folder-kraft .sb-kpi-lbl { color: #554D41; }
+.sb-folder-kraft .sb-kpi-val { color: #0E1015; }
+.sb-folder-kraft .sb-folder-view-btn { color: #0E1015; }
+.sb-folder-kraft .sb-taped-sheet { background: #171920; border: 1px solid rgba(0, 0, 0, 0.22); color: #FFFFFF; }
+
+/* 5. Navy Folder (Bloomberg Deep Navy) */
+.sb-folder-navy .sb-folder-tab,
+.sb-folder-navy .sb-folder-body {
+  background: #0D1C2E;
+  color: #FFFFFF;
+}
+.sb-folder-navy .sb-folder-dot { background: #38BDF8; box-shadow: 0 0 8px #38BDF8; }
+.sb-folder-navy .sb-folder-title { color: #FFFFFF; }
+.sb-folder-navy .sb-folder-desc { color: #B4CADB; }
+.sb-folder-navy .sb-folder-kpi { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.10); }
+.sb-folder-navy .sb-kpi-val { color: #38BDF8; }
+.sb-folder-navy .sb-folder-view-btn { color: #FFFFFF; }
+.sb-folder-navy .sb-taped-sheet { background: #08121E; border: 1px solid rgba(56, 189, 248, 0.22); color: #FFFFFF; }
+
+/* 6. Coral Folder (Flame Terracotta / Coral Oxide) */
+.sb-folder-coral .sb-folder-tab,
+.sb-folder-coral .sb-folder-body {
+  background: #BD482B;
+  color: #FFFFFF;
+}
+.sb-folder-coral .sb-folder-dot { background: #FDE047; box-shadow: 0 0 8px #FDE047; }
+.sb-folder-coral .sb-folder-title { color: #FFFFFF; }
+.sb-folder-coral .sb-folder-desc { color: #F8D3CB; }
+.sb-folder-coral .sb-folder-kpi { background: rgba(0, 0, 0, 0.14); border: 1px solid rgba(255, 255, 255, 0.15); }
+.sb-folder-coral .sb-kpi-val { color: #FFFFFF; }
+.sb-folder-coral .sb-folder-view-btn { color: #FFFFFF; }
+.sb-folder-coral .sb-taped-sheet { background: #161820; border: 1px solid rgba(255, 255, 255, 0.15); color: #FFFFFF; }
+
+/* 7. CONTACT & FOOTER SECTION (Image 2 Black Card & Image 3) */
+.sb-footer-box {
+  background: var(--sb-black);
+  border-radius: 28px;
+  padding: 44px 40px;
+  color: #FFFFFF;
+  margin: 40px auto 30px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+.sb-footer-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.sb-footer-title {
+  font-family: var(--sb-font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.sb-footer-subtitle {
+  font-family: var(--sb-font-mono);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--sb-text-inv-muted);
+  margin: 0 0 20px;
+}
+
+.sb-contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: var(--sb-font-mono);
+  font-size: 12px;
+}
+
+.sb-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.16s ease;
+}
+
+.sb-contact-item:hover {
+  color: var(--sb-coral);
+}
+
+.sb-footer-right-card {
+  background: #171822;
+  border: 1px solid var(--sb-black-border);
+  border-radius: 18px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sb-footer-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  margin-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  color: var(--sb-text-inv-muted);
+}
+
+/* 8. PROTECTED CERTIFICATE LIGHTBOX MODAL */
+.cert-lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(14, 15, 20, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.cert-lightbox-modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.lightbox-content-box {
+  background: #FFFFFF;
+  border: 1px solid var(--sb-border);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  max-width: 920px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--sb-border);
+  background: #FAFBFD;
+}
+
+.lightbox-title {
+  font-family: var(--sb-font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--sb-black);
+}
+
+.lightbox-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lightbox-protected-badge {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--sb-emerald-dark);
+  background: rgba(0, 168, 107, 0.08);
+  border: 1px solid rgba(0, 168, 107, 0.3);
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lightbox-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  color: var(--sb-black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.16s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--sb-black);
+  color: #FFFFFF;
+  border-color: var(--sb-black);
+}
+
+.lightbox-img-wrap {
+  position: relative;
+  flex: 1;
+  padding: 24px;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F4F6F9;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.cert-protection-shield {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  background: transparent;
+  pointer-events: auto;
+}
+
+/* Master responsive breakpoints are defined in the dedicated section at the end of this stylesheet */
+
+/* ==========================================================================
+   GROWUP SIGNATURE SHAPED STAGE & 5 INTERACTIVE CREDIT CARDS (IMAGE 1:1)
+   - Exact Bevels & Cuts SVG Silhouette (Circled in User Reference Image)
+   - Left S-Curve Bevel, Center Tab, Right S-Curve Bevel, Top Recessed Notch
+   - Exposed Dark Wings Below with Institutional Partner Logos
+   - 5 Interactive 3D Stacked Credit Cards: Click Card to Cycle to Next Card
+   - "View All Certifications" Button Opening Full Dossier Page / Modal
+   ========================================================================== */
+
+.sb-growup-outer-wrap {
+  margin: 48px auto 68px;
+  position: relative;
+  z-index: 20;
+  background: transparent;
+  border-radius: 36px;
+  overflow: visible;
+  box-shadow: none;
+  filter: none;
+}
+
+/* The Shaped Container with SVG Silhouette Backdrop */
+.sb-growup-canvas-box {
+  position: relative;
+  min-height: 640px;
+  overflow: visible;
+  box-shadow: none;
+  filter: none;
+}
+
+.sb-growup-svg-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  filter: none;
+  box-shadow: none;
+}
+
+/* Foreground Content Sitting Inside the Shaped Lime-Mint Stage */
+.sb-growup-inner-content {
+  position: relative;
+  z-index: 5;
+  padding: 38px 44px 54px;
+}
+
+/* Stepped Notch Top Bar inside the Shape */
+.sb-growup-top-notch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  margin-bottom: 34px;
+}
+
+.sb-notch-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sb-font-display);
+  font-size: 14px;
+  font-weight: 800;
+  color: #0E1015;
+  text-transform: uppercase;
+}
+
+.sb-notch-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #2D3340;
+}
+
+.sb-notch-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #0E1015;
+}
+
+/* Main Split Grid: Left Text & CTAs, Right Interactive Credit Card Stack */
+.sb-growup-main-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 44px;
+}
+
+/* Left Column */
+.sb-growup-headline {
+  font-family: var(--sb-font-display);
+  font-size: clamp(34px, 4.8vw, 58px);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: #0E1015;
+  margin: 0 0 16px;
+}
+
+.sb-growup-desc {
+  font-family: var(--sb-font-body);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #2D3342;
+  margin: 0 0 24px;
+  max-width: 500px;
+}
+
+.sb-growup-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+/* View All Certifications Button */
+.sb-btn-view-all-certs {
+  background: #0E1015;
+  color: #FFFFFF;
+  font-family: var(--sb-font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 11px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: all 0.18s ease;
+  border: 1px solid #0E1015;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.sb-btn-view-all-certs:hover {
+  background: #232634;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sb-btn-explore-models {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #0E1015;
+  font-family: var(--sb-font-mono);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 11px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.18s ease;
+}
+
+.sb-btn-explore-models:hover {
+  background: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Ratings & Laurels */
+.sb-growup-proof-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.sb-growup-stars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sb-stars-gold {
+  color: #0E1015;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.sb-stars-lbl {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #0E1015;
+}
+
+.sb-laurel-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #0E1015;
+  line-height: 1.3;
+}
+
+
+
+/* ==========================================================================
+   5 INTERACTIVE CREDIT CARDS STACK (CLICK TO CYCLE TO NEXT CARD)
+   ========================================================================== */
+
+.sb-card-deck-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+/* The 3D Layered Card Stack Container */
+.sb-card-deck-stack {
+  position: relative;
+  width: 380px;
+  height: 245px;
+  cursor: pointer;
+  perspective: 1000px;
+  user-select: none;
+}
+
+/* Individual Credit Card */
+.sb-credit-card {
+  position: absolute;
+  inset: 0;
+  background: #111218;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  padding: 22px 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.38);
+  transition: 
+    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.32s ease,
+    box-shadow 0.32s ease;
+  will-change: transform, opacity;
+}
+
+/* Background Micro Grid Watermark on Cards */
+.sb-credit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 85% 15%, rgba(206, 247, 110, 0.14) 0, transparent 65%),
+    radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+  background-size: auto, 14px 14px;
+  pointer-events: none;
+}
+
+/* Top-Right Scooped Shoulder Cutout */
+.sb-credit-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 145px;
+  height: 48px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Dynamic 3D Layering Classes */
+.sb-credit-card.card-pos-0 {
+  transform: translateY(0px) scale(1);
+  z-index: 5;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sb-credit-card.card-pos-1 {
+  transform: translateY(14px) scale(0.96);
+  z-index: 4;
+  opacity: 0.86;
+  pointer-events: none;
+}
+
+.sb-credit-card.card-pos-2 {
+  transform: translateY(28px) scale(0.92);
+  z-index: 3;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+.sb-credit-card.card-pos-3 {
+  transform: translateY(42px) scale(0.88);
+  z-index: 2;
+  opacity: 0.56;
+  pointer-events: none;
+}
+
+.sb-credit-card.card-pos-4 {
+  transform: translateY(56px) scale(0.84);
+  z-index: 1;
+  opacity: 0.40;
+  pointer-events: none;
+}
+
+/* Spring Fly-Out Animation when cycling cards */
+.sb-credit-card.anim-fly-out {
+  transform: translateY(-90px) scale(1.04) rotate(-3deg);
+  opacity: 0.1;
+  transition: transform 0.22s ease-out, opacity 0.22s ease-out;
+}
+
+/* Credit Card Inner Layout */
+.sb-cc-top-row {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sb-cc-brand-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-cc-chip {
+  width: 24px;
+  height: 18px;
+  background: linear-gradient(135deg, #FDE68A 0%, #D97706 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sb-cc-chip-line {
+  width: 14px;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
+}
+
+.sb-cc-issuer-name {
+  font-family: var(--sb-font-display);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+/* Scooped Shoulder Lime Plus Button */
+.sb-cc-scoop-pill {
+  background: #CEF76E;
+  color: #0E1015;
+  font-family: var(--sb-font-mono);
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(206, 247, 110, 0.35);
+  transition: transform 0.16s ease;
+}
+
+.sb-cc-scoop-pill:hover {
+  transform: scale(1.06);
+}
+
+.sb-cc-mid-row {
+  position: relative;
+  z-index: 5;
+  margin: 10px 0;
+}
+
+.sb-cc-title-lbl {
+  font-family: var(--sb-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+.sb-cc-cert-title {
+  font-family: var(--sb-font-display);
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+  margin: 3px 0 6px;
+}
+
+.sb-cc-curriculum-snippet {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.sb-cc-bottom-row {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sb-cc-id-tag {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Attached Vertical Cyan Pill Widget */
+.sb-cc-attached-pill {
+  position: absolute;
+  right: -52px;
+  top: 10px;
+  bottom: 10px;
+  width: 44px;
+  background: #76E4D6;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 18px;
+  padding: 14px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: #0E1015;
+  box-shadow: 
+    0 12px 24px rgba(0, 0, 0, 0.22),
+    inset 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.sb-cc-dots {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.sb-cc-microchip {
+  width: 18px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  border-radius: 3px;
+}
+
+.sb-cc-vtext {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--sb-font-display);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Deck Controls & Indicators */
+.sb-deck-controls-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 52px;
+  position: relative;
+  z-index: 10;
+}
+
+.sb-deck-cycle-hint {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: #0E1015;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sb-deck-dots-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sb-deck-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(14, 16, 21, 0.25);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sb-deck-dot.active {
+  width: 22px;
+  border-radius: 999px;
+  background: #0E1015;
+}
+
+/* ==========================================================================
+   DEDICATED FULL DOSSIER MODAL ("VIEW ALL CERTIFICATIONS" PAGE)
+   ========================================================================== */
+
+.sb-all-certs-dossier-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(14, 16, 21, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.sb-all-certs-dossier-modal.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.sb-dossier-content-card {
+  background: #FFFFFF;
+  border: 1px solid var(--sb-border);
+  border-radius: 28px;
+  box-shadow: 0 28px 72px rgba(0, 0, 0, 0.45);
+  max-width: 980px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sb-dossier-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--sb-border);
+  background: #F8FAFC;
+}
+
+.sb-dossier-title-block h3 {
+  font-family: var(--sb-font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #0E1015;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sb-dossier-title-block p {
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  color: var(--sb-text-muted);
+  margin: 4px 0 0;
+}
+
+.sb-dossier-close-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--sb-border);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #0E1015;
+  transition: all 0.16s ease;
+}
+
+.sb-dossier-close-btn:hover {
+  background: #0E1015;
+  color: #FFFFFF;
+  border-color: #0E1015;
+}
+
+.sb-dossier-scroll-body {
+  padding: 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #F4F6F9;
+}
+
+/* Individual Certificate Dossier Item inside View All Modal */
+.sb-dossier-cert-box {
+  background: #FFFFFF;
+  border: 1px solid var(--sb-border);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+  transition: transform 0.16s ease, border-color 0.16s ease;
+}
+
+.sb-dossier-cert-box:hover {
+  transform: translateY(-2px);
+  border-color: #A0AEC0;
+}
+
+.sb-dossier-cert-info {
+  flex: 1;
+}
+
+.sb-dossier-cert-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.sb-dossier-issuer {
+  font-family: var(--sb-font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+  text-transform: uppercase;
+}
+
+.sb-dossier-status-pill {
+  font-family: var(--sb-font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  background: #D4F772;
+  color: #0E1015;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.sb-dossier-cert-name {
+  font-family: var(--sb-font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #0E1015;
+  margin: 0 0 8px;
+}
+
+.sb-dossier-cert-desc {
+  font-family: var(--sb-font-body);
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4A5568;
+  margin: 0 0 14px;
+}
+
+.sb-dossier-topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sb-dossier-topic-tag {
+  font-family: var(--sb-font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  background: #EDF2F7;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #2D3748;
+}
+
+.sb-dossier-cert-side {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  border-left: 1px solid #EDF2F7;
+  padding-left: 20px;
+}
+
+.sb-dossier-cert-id {
+  font-family: var(--sb-font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--sb-text-muted);
+}
+
+.sb-dossier-view-btn {
+  background: #0E1015;
+  color: #FFFFFF;
+  font-family: var(--sb-font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.16s ease;
+}
+
+.sb-dossier-view-btn:hover {
+  background: #2D3748;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   MASTER COMPREHENSIVE RESPONSIVE DESIGN SYSTEM (ALL SCREEN SIZES)
+   - 1024px: Laptops & Tablets Landscape
+   - 860px: Tablets Portrait & Mobile Navigation Drawer
+   - 680px: Phablets & Large Mobiles
+   - 520px: Standard Smartphones (iPhone 12-16, Pixel, Galaxy)
+   - 380px: Small Screen Phones (320px - 375px)
+   - Zero horizontal overflow guarantees across every breakpoint
+   ========================================================================== */
+
+/* 1. TABLET LANDSCAPE & SMALL LAPTOPS (<= 1024px) */
+@media (max-width: 1024px) {
+  .sb-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    min-height: auto;
+  }
+
+  .sb-hero-card-left {
+    max-width: 100%;
+    min-height: auto;
+  }
+
+  .sb-hero-right {
+    min-height: 420px;
+    margin-top: 10px;
+  }
+
+  .sb-hero-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .sb-swiss-bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .sb-certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .sb-growup-main-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .sb-card-deck-stack {
+    margin-right: 50px;
+  }
+
+  .sb-dossier-cert-box {
+    flex-direction: column;
+  }
+
+  .sb-dossier-cert-side {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #EDF2F7;
+    padding-left: 0;
+    padding-top: 14px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .sb-folder-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .sb-footer-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+/* 2. TABLET PORTRAIT & MOBILE NAVIGATION BAR (<= 860px) */
+@media (max-width: 860px) {
+  .sb-topbar {
+    position: sticky;
+    top: 10px;
+    padding: 10px 18px;
+    border-radius: 24px;
+    margin: 10px auto 16px;
+  }
+
+  /* Hamburger Toggle Appears */
+  .sb-mobile-menu-btn {
+    display: flex;
+  }
+
+  .sb-mobile-menu-btn.open .sb-hamburger-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .sb-mobile-menu-btn.open .sb-hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  .sb-mobile-menu-btn.open .sb-hamburger-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile Navigation Dropdown */
+  .sb-nav-links {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--sb-border);
+    border-radius: 20px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16);
+    padding: 14px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.24s cubic-bezier(0.16, 1, 0.3, 1), transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 150;
+  }
+
+  .sb-nav-links.open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .sb-nav-link {
+    padding: 11px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .sb-nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .sb-nav-link:hover,
+  .sb-nav-link.active {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--sb-coral);
+  }
+
+  .sb-pill-badge {
+    display: none;
+  }
+}
+
+/* 3. PHABLETS & LARGE MOBILES (<= 680px) */
+@media (max-width: 680px) {
+  .sb-container {
+    padding: 0 16px;
+  }
+
+  .sb-hero-stage {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .sb-hero-card-left {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .sb-hero-desc-card {
+    padding: 18px 18px 16px;
+    border-radius: 12px;
+  }
+
+  .sb-hero-big-title {
+    font-size: 30px;
+  }
+
+  .sb-hero-desc {
+    font-size: 13px;
+  }
+
+  .sb-hero-right {
+    min-height: 360px;
+  }
+
+  .sb-circle-cta-btn {
+    width: 96px;
+    height: 96px;
+    font-size: 9px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .sb-coin-controls-row {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  /* Single Column Stacking for Grid Sections */
+  .sb-hero-cards-grid,
+  .sb-swiss-bento-grid,
+  .sb-certs-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /* Growup Shaped Stage */
+  .sb-growup-outer-wrap {
+    margin: 36px auto 48px;
+    border-radius: 24px;
+  }
+
+  .sb-growup-inner-content {
+    padding: 24px 18px 44px;
+  }
+
+  .sb-growup-headline {
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .sb-growup-desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .sb-notch-nav {
+    display: none;
+  }
+
+  /* Portfolio Master Dossier Folder */
+  .sb-portfolio-files-section {
+    margin-bottom: 40px;
+    padding: 8px 0 16px;
+  }
+
+  .sb-single-file-folder {
+    padding: 24px 18px;
+    border-radius: 14px 16px 16px 16px;
+    min-height: auto;
+  }
+
+  .sb-folder-title {
+    font-size: 22px;
+  }
+
+  .sb-folder-desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .sb-folder-kpis {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .sb-folder-kpi {
+    padding: 6px 10px;
+  }
+
+  .sb-kpi-val {
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .sb-footer-box {
+    padding: 30px 20px;
+    border-radius: 22px;
+  }
+
+  .sb-footer-title {
+    font-size: 24px;
+  }
+
+  .sb-footer-meta-row {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Modals */
+  .sb-all-certs-dossier-modal,
+  .cert-lightbox-modal {
+    padding: 12px;
+  }
+
+  .sb-dossier-content-card,
+  .lightbox-content-box {
+    border-radius: 18px;
+    max-height: 94vh;
+  }
+
+  .sb-dossier-header,
+  .lightbox-header {
+    padding: 14px 18px;
+  }
+}
+
+/* 4. STANDARD SMARTPHONES (<= 520px) */
+@media (max-width: 520px) {
+  /* Credit Card Deck Stack on Mobile (ZERO Horizontal Overflow) */
+  .sb-card-deck-stage {
+    min-height: 310px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .sb-card-deck-stack {
+    width: min(320px, calc(100vw - 72px));
+    height: 215px;
+    margin-right: 32px;
+  }
+
+  .sb-credit-card {
+    border-radius: 18px;
+    padding: 15px 16px;
+  }
+
+  .sb-cc-attached-pill {
+    right: -36px;
+    width: 32px;
+    top: 6px;
+    bottom: 6px;
+    padding: 10px 4px;
+    border-radius: 14px;
+  }
+
+  .sb-cc-vtext {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+
+  .sb-cc-dots {
+    font-size: 12px;
+  }
+
+  .sb-cc-cert-title {
+    font-size: 15px;
+    margin: 2px 0 4px;
+  }
+
+  .sb-cc-curriculum-snippet {
+    font-size: 9.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .sb-cc-chip {
+    width: 20px;
+    height: 15px;
+  }
+
+  .sb-cc-chip-line {
+    width: 11px;
+    height: 8px;
+  }
+
+  .sb-deck-controls-row {
+    margin-top: 42px;
+  }
+
+  /* Portfolio Tabs on Mobile: Fluid Horizontal Swipe */
+  .sb-master-tab-bar {
+    padding: 0 2px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sb-tab-inner {
+    padding: 8px 16px 8px 14px;
+    font-size: 10px;
+  }
+
+  .sb-master-tab-btn:first-child .sb-tab-inner {
+    padding-left: 14px;
+    padding-right: 20px;
+  }
+
+  .sb-master-tab-btn:not(:first-child) .sb-tab-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .sb-tab-tag {
+    font-size: 8.5px;
+  }
+
+  /* Hero adjustments */
+  .sb-hero-desc-card .sb-hero-big-title {
+    font-size: 26px;
+  }
+
+  .sb-hero-desc-card .sb-hero-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  .sb-hero-desc-card .sb-hero-strengths-plain {
+    font-size: 10.5px;
+  }
+}
+
+/* 5. SMALL SMARTPHONES (<= 380px) */
+@media (max-width: 380px) {
+  .sb-container {
+    padding: 0 10px;
+  }
+
+  .sb-topbar {
+    padding: 8px 12px;
+    margin: 8px auto 12px;
+  }
+
+  .sb-brand-tag {
+    display: none;
+  }
+
+  .sb-brand-name {
+    font-size: 13px;
+  }
+
+  .sb-btn-black-pill {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .sb-mobile-menu-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sb-hamburger-bar {
+    width: 15px;
+  }
+
+  /* Card Stack ultra-compact */
+  .sb-card-deck-stack {
+    width: min(270px, calc(100vw - 56px));
+    height: 195px;
+    margin-right: 28px;
+  }
+
+  .sb-credit-card {
+    padding: 12px 14px;
+    border-radius: 15px;
+  }
+
+  .sb-cc-attached-pill {
+    right: -28px;
+    width: 25px;
+    border-radius: 10px;
+  }
+
+  .sb-cc-dots {
+    font-size: 10px;
+  }
+
+  .sb-cc-vtext {
+    font-size: 7px;
+  }
+
+  .sb-cc-cert-title {
+    font-size: 13.5px;
+  }
+
+  /* Drafting rings & CTA button */
+  .sb-ring-outer {
+    width: min(280px, 86vw);
+    height: min(280px, 86vw);
+  }
+
+  .sb-ring-inner {
+    width: min(210px, 62vw);
+    height: min(210px, 62vw);
+  }
+
+  .sb-circle-cta-btn {
+    width: 82px;
+    height: 82px;
+    font-size: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .sb-coin-controls-row {
+    left: 8px;
+    bottom: 8px;
+    gap: 4px;
+  }
+
+  .sb-coin-mini-btn {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .sb-single-file-folder {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .sb-folder-title {
+    font-size: 19px;
+  }
+}
+
+

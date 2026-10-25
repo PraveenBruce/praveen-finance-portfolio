@@ -1,0 +1,97 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780">
+  <defs>
+    <linearGradient id="fmvaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#EEF2F6" />
+    </linearGradient>
+    <linearGradient id="fmvaNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540" />
+      <stop offset="100%" stop-color="#001529" />
+    </linearGradient>
+    <linearGradient id="fmvaGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5BA42" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <radialGradient id="fmvaSeal" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFEAA7" />
+      <stop offset="40%" stop-color="#D4AF37" />
+      <stop offset="80%" stop-color="#8C6208" />
+      <stop offset="100%" stop-color="#4F3500" />
+    </radialGradient>
+    <filter id="fmvaShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="780" rx="16" fill="url(#fmvaBg)" />
+  <rect x="24" y="24" width="1052" height="732" rx="10" fill="none" stroke="#0A2540" stroke-width="5" />
+  <rect x="36" y="36" width="1028" height="708" rx="6" fill="none" stroke="url(#fmvaGold)" stroke-width="2" />
+  <rect x="44" y="44" width="1012" height="692" rx="4" fill="none" stroke="#E2E8F0" stroke-width="1" />
+
+  <!-- Corner Chevrons -->
+  <g fill="#0A2540">
+    <polygon points="24,24 80,24 24,80" />
+    <polygon points="1076,24 1020,24 1076,80" />
+    <polygon points="24,756 80,756 24,700" />
+    <polygon points="1076,756 1020,756 1076,700" />
+  </g>
+
+  <!-- Crest -->
+  <g transform="translate(550, 110)" text-anchor="middle">
+    <circle cx="0" cy="0" r="30" fill="#0A2540" />
+    <path d="M -12 -10 L 0 -20 L 12 -10 L 12 12 L -12 12 Z" fill="url(#fmvaGold)" />
+    <text x="0" y="6" font-family="'Helvetica Neue', sans-serif" font-size="11" font-weight="900" fill="#0A2540" text-anchor="middle">CFI</text>
+  </g>
+
+  <text x="550" y="172" font-family="'Helvetica Neue', sans-serif" font-size="24" font-weight="800" fill="#0A2540" text-anchor="middle" letter-spacing="3">CORPORATE FINANCE INSTITUTE</text>
+  <text x="550" y="196" font-family="'Helvetica Neue', sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1.5">NEW YORK â€¢ VANCOUVER â€¢ FINANCIAL MODELING ACCREDITATION BOARD</text>
+  
+  <line x1="300" y1="216" x2="800" y2="216" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <text x="550" y="248" font-family="'Georgia', serif" font-size="16" font-style="italic" fill="#475569" text-anchor="middle">Be it known to all that</text>
+  <text x="550" y="302" font-family="'Georgia', serif" font-size="44" font-weight="bold" fill="#0A2540" text-anchor="middle">PRAVEEN S</text>
+  <line x1="280" y1="320" x2="820" y2="320" stroke="url(#fmvaGold)" stroke-width="2" />
+
+  <text x="550" y="356" font-family="'Helvetica Neue', sans-serif" font-size="14" fill="#64748B" text-anchor="middle">has successfully completed all rigorous coursework and examination requirements to achieve the designation of</text>
+  <text x="550" y="396" font-family="'Helvetica Neue', sans-serif" font-size="28" font-weight="800" fill="#0A2540" text-anchor="middle" letter-spacing="1">FINANCIAL MODELING &amp; VALUATION ANALYST (FMVAÂ®)</text>
+
+  <text x="550" y="435" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">Demonstrating Wall Street-standard financial modeling mastery in 3-Statement Dynamic Forecasting, DCF Valuation,</text>
+  <text x="550" y="458" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">Multi-Tranche LBO Debt Waterfalls, M&amp;A Accretion/Dilution Analysis, and Advanced Data Tables.</text>
+
+  <!-- Competencies Pills Banner -->
+  <g transform="translate(140, 492)">
+    <rect x="0" y="0" width="820" height="38" rx="8" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1" />
+    <text x="410" y="24" font-family="'Helvetica Neue', sans-serif" font-size="11" font-weight="bold" fill="#0A2540" text-anchor="middle" letter-spacing="1">
+      120+ AUDITED HOURS â€¢ IB COLOR-CODED HYGIENE â€¢ CAPSTONE: LIVE LBO PITCH â€¢ REG: FMVA-8402-NY
+    </text>
+  </g>
+
+  <!-- Signatures -->
+  <g transform="translate(240, 620)" text-anchor="middle">
+    <path d="M -80 -25 C -50 -45 -20 -10 10 -30 C 40 -45 70 -10 90 -20" fill="none" stroke="#0A2540" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#94A3B8" stroke-width="1" />
+    <text x="0" y="18" font-family="'Helvetica Neue', sans-serif" font-size="14" font-weight="bold" fill="#0A2540">Tim Vipond</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="11" fill="#64748B">Co-Founder &amp; Board Chair</text>
+  </g>
+
+  <!-- Medallion -->
+  <g transform="translate(550, 616)" filter="url(#fmvaShadow)">
+    <circle cx="0" cy="0" r="44" fill="url(#fmvaSeal)" stroke="#FFFFFF" stroke-width="2" />
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4,2" />
+    <text x="0" y="-10" font-family="'Helvetica Neue', sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CFI GLOBAL</text>
+    <text x="0" y="10" font-family="'Helvetica Neue', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">FMVAÂ®</text>
+    <text x="0" y="24" font-family="'Helvetica Neue', sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CERTIFIED</text>
+  </g>
+
+  <g transform="translate(860, 620)" text-anchor="middle">
+    <path d="M -85 -15 C -50 -40 -15 -10 15 -32 C 45 -42 75 -15 85 -22" fill="none" stroke="#0A2540" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#94A3B8" stroke-width="1" />
+    <text x="0" y="18" font-family="'Helvetica Neue', sans-serif" font-size="14" font-weight="bold" fill="#0A2540">Scott Powell</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="11" fill="#64748B">Chief Content Officer</text>
+  </g>
+
+  <text x="80" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B">CREDENTIAL ID: FMVA-8402-NY</text>
+  <text x="550" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B" text-anchor="middle">CFI VERIFICATION LEDGER: HEX-481920</text>
+  <text x="1020" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B" text-anchor="end">CERTS.CORPORATEFINANCEINSTITUTE.COM</text>
+</svg>

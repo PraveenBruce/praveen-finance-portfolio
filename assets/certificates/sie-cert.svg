@@ -1,0 +1,90 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780">
+  <defs>
+    <linearGradient id="sieBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+    <linearGradient id="sieBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0052CC" />
+      <stop offset="100%" stop-color="#0747A6" />
+    </linearGradient>
+    <radialGradient id="sieSeal" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="40%" stop-color="#2563EB" />
+      <stop offset="80%" stop-color="#1E40AF" />
+      <stop offset="100%" stop-color="#172554" />
+    </radialGradient>
+    <filter id="sieShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="780" rx="16" fill="url(#sieBg)" />
+  <rect x="24" y="24" width="1052" height="732" rx="10" fill="none" stroke="#1E3A8A" stroke-width="4" />
+  <rect x="36" y="36" width="1028" height="708" rx="6" fill="none" stroke="#3B82F6" stroke-width="1.5" />
+
+  <!-- Bold Navy Angled Corners -->
+  <g fill="#1E3A8A">
+    <polygon points="24,24 90,24 24,90" />
+    <polygon points="1076,24 1010,24 1076,90" />
+    <polygon points="24,756 90,756 24,690" />
+    <polygon points="1076,756 1010,756 1076,690" />
+  </g>
+
+  <!-- Seal Emblem -->
+  <g transform="translate(550, 110)" text-anchor="middle">
+    <circle cx="0" cy="0" r="32" fill="#1E3A8A" />
+    <polygon points="0,-18 5,-6 18,-6 8,2 12,14 0,7 -12,14 -8,2 -18,-6 -5,-6" fill="#FFFFFF" />
+  </g>
+
+  <text x="550" y="172" font-family="'Georgia', serif" font-size="24" font-weight="bold" fill="#1E3A8A" text-anchor="middle" letter-spacing="3">FINANCIAL INDUSTRY REGULATORY AUTHORITY</text>
+  <text x="550" y="196" font-family="'Helvetica Neue', sans-serif" font-size="11.5" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="1.5">WASHINGTON, D.C. â€¢ CAPITAL MARKETS &amp; REGULATORY OVERSIGHT</text>
+  
+  <line x1="300" y1="216" x2="800" y2="216" stroke="#CBD5E1" stroke-width="1.5" />
+
+  <text x="550" y="248" font-family="'Georgia', serif" font-size="16" font-style="italic" fill="#475569" text-anchor="middle">Attestation of Professional Qualification Conferred Upon</text>
+  <text x="550" y="302" font-family="'Georgia', serif" font-size="44" font-weight="bold" fill="#0F172A" text-anchor="middle">PRAVEEN S</text>
+  <line x1="280" y1="320" x2="820" y2="320" stroke="#3B82F6" stroke-width="2" />
+
+  <text x="550" y="356" font-family="'Helvetica Neue', sans-serif" font-size="14" fill="#64748B" text-anchor="middle">having successfully satisfied all qualification examinations for the</text>
+  <text x="550" y="394" font-family="'Helvetica Neue', sans-serif" font-size="28" font-weight="800" fill="#1E3A8A" text-anchor="middle" letter-spacing="1">FINRA SIEÂ® â€¢ SECURITIES INDUSTRY ESSENTIALS</text>
+
+  <text x="550" y="432" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">Verifying comprehensive regulatory mastery of Capital Markets Structure, SEC Reg D/S &amp; Rule 144,</text>
+  <text x="550" y="454" font-family="'Georgia', serif" font-size="14" fill="#334155" text-anchor="middle">Debt &amp; Equity Underwriting, Prohibited Trading Conduct, and Investment Banking Series 79 Pathway.</text>
+
+  <!-- Competencies Pills Banner -->
+  <g transform="translate(140, 490)">
+    <rect x="0" y="0" width="820" height="38" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1" />
+    <text x="410" y="24" font-family="'Helvetica Neue', sans-serif" font-size="11" font-weight="bold" fill="#1E3A8A" text-anchor="middle" letter-spacing="1">
+      REGULATORY: SEC / FINRA â€¢ PATHWAY: SERIES 79 â€¢ SCOPE: CAPITAL MARKETS â€¢ CRD: SIE-2026-79
+    </text>
+  </g>
+
+  <!-- Signatures -->
+  <g transform="translate(240, 620)" text-anchor="middle">
+    <path d="M -80 -25 C -50 -45 -20 -10 10 -30 C 40 -45 70 -10 90 -20" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#94A3B8" stroke-width="1" />
+    <text x="0" y="18" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="#0F172A">Robert W. Cook</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="11" fill="#64748B">President &amp; Chief Executive Officer</text>
+  </g>
+
+  <!-- Medallion -->
+  <g transform="translate(550, 616)" filter="url(#sieShadow)">
+    <circle cx="0" cy="0" r="44" fill="url(#sieSeal)" stroke="#93C5FD" stroke-width="2" />
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="4,2" />
+    <text x="0" y="-10" font-family="'Helvetica Neue', sans-serif" font-size="9" font-weight="bold" fill="#FFFFFF" text-anchor="middle">FINRA QUALIFIED</text>
+    <text x="0" y="10" font-family="'Helvetica Neue', sans-serif" font-size="18" font-weight="900" fill="#FFFFFF" text-anchor="middle">SIEÂ®</text>
+    <text x="0" y="24" font-family="'Helvetica Neue', sans-serif" font-size="8" font-weight="bold" fill="#FFFFFF" text-anchor="middle">REGISTERED</text>
+  </g>
+
+  <g transform="translate(860, 620)" text-anchor="middle">
+    <path d="M -85 -15 C -50 -40 -15 -10 15 -32 C 45 -42 75 -15 85 -22" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round" />
+    <line x1="-110" y1="0" x2="110" y2="0" stroke="#94A3B8" stroke-width="1" />
+    <text x="0" y="18" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="#0F172A">Marcia E. Asquith</text>
+    <text x="0" y="34" font-family="'Helvetica Neue', sans-serif" font-size="11" fill="#64748B">Executive VP &amp; Corporate Secretary</text>
+  </g>
+
+  <text x="80" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B">CRD RECORD: SIE-2026-79</text>
+  <text x="550" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B" text-anchor="middle">REGISTRATION HASH: SEC-144A-8821</text>
+  <text x="1020" y="724" font-family="'Courier New', monospace" font-size="10" fill="#64748B" text-anchor="end">FINRA.ORG/BROKERCHECK</text>
+</svg>

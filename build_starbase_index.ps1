@@ -1,0 +1,1566 @@
+# PowerShell script to build index.html with the minimalist Starbase / architectural drafting theme
+$htmlContent = @'
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description" content="Praveen S - MBA in Finance & CFA&reg; Level I Candidate - Institutional Investment Banking Valuation & Quantitative Portfolio Architecture" />
+  <meta name="theme-color" content="#EAECF0" />
+  <title>Praveen S • Minimalist | MBA in Finance • Capital Markets Architecture</title>
+
+  <!-- Google Fonts: Chakra Petch, Space Grotesk, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Base and Starbase Minimalist Theme Styles -->
+  <link rel="stylesheet" href="styles.css?v=sbResp1" />
+  <link rel="stylesheet" href="starbase_theme.css?v=sbResp1" />
+</head>
+<body class="starbase-ui" oncontextmenu="return true;">
+
+  <!-- FIXED 3D FINANCE COIN AMBIENT BACKGROUND CANVAS -->
+  <canvas id="bgMeshCanvas" class="cg-fixed-coin-bg"></canvas>
+
+  <div class="sb-container">
+
+    <!-- 1. TOP NAVBAR (Minimalist Starbase Style) -->
+    <header class="sb-topbar">
+      <a href="#hero" class="sb-brand-wrap">
+        <div class="sb-brand-mark">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span class="sb-brand-name">PRAVEEN S</span>
+        <span class="sb-brand-dot"></span>
+        <span class="sb-brand-tag">FINANCE LABS</span>
+      </a>
+
+      <nav class="sb-nav-links" id="sbNavLinks">
+        <a href="#hero" class="sb-nav-link active">OVERVIEW</a>
+        <a href="#qualifications" class="sb-nav-link">QUALIFICATIONS</a>
+        <a href="#executive-summary" class="sb-nav-link">EXECUTIVE SUMMARY</a>
+        <a href="#certifications" class="sb-nav-link">CERTIFICATIONS</a>
+        <a href="#portfolio" class="sb-nav-link">PORTFOLIO</a>
+      </nav>
+
+      <div class="sb-topbar-actions">
+        <div class="sb-pill-badge sb-pill-badge-emerald">
+          <span class="sb-tag-dot"></span>
+          <span>CFA&reg; L-I CANDIDATE</span>
+        </div>
+        <a href="#contact" class="sb-btn-black-pill">
+          <span>GET IN TOUCH</span>
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+        <button type="button" class="sb-mobile-menu-btn" id="sbMobileMenuBtn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="sb-hamburger-bar"></span>
+          <span class="sb-hamburger-bar"></span>
+          <span class="sb-hamburger-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. ARCHITECTURAL HERO SECTION (Clean, Minimalist Layout with Open 3D Coin) -->
+    <section class="sb-hero-stage" id="hero">
+      <div class="sb-hero-layout">
+        <!-- Left Hero Column: Pristine Architectural White Card -->
+        <div class="sb-hero-card-left">
+          <span class="sb-corner-cross sb-corner-tl">+</span>
+          <span class="sb-corner-cross sb-corner-tr">+</span>
+          <span class="sb-corner-cross sb-corner-bl">+</span>
+          <span class="sb-corner-cross sb-corner-br">+</span>
+
+          <!-- 1. Giant Architectural Watermark Behind Praveen's Image -->
+          <div class="sb-hero-bg-monumental-text" aria-hidden="true">
+            <span>INSTITUTIONAL</span>
+            <span>VALUATION</span>
+          </div>
+
+          <!-- 2. Full Image: Entire body centered in front of the giant text -->
+          <div class="sb-hero-full-photo-wrap">
+            <img src="assets/praveen-portrait.png" alt="Praveen S &mdash; Institutional Valuation & Financial Modeling" class="sb-hero-full-photo-img" />
+          </div>
+
+          <!-- 3. Soft Transition Blur Pane Over Second Half of Body Only -->
+          <div class="sb-hero-lower-body-blur-pane"></div>
+
+          <!-- 4. Dedicated Architectural Black Description Card -->
+          <div class="sb-hero-desc-card">
+            <h1 class="sb-hero-big-title">
+              PRAVEEN S<span class="sb-dot-accent">.</span>
+            </h1>
+
+            <p class="sb-hero-desc">
+              Specialized in institutional discounted cash flow (DCF) valuation, three-statement dynamic forecasting, LBO debt waterfalls, and quantitative portfolio risk analysis. Certified in Bloomberg BMC (94%), CFI FMVA&reg; (120+ audited hours), and Python quantitative computing.
+            </p>
+
+            <!-- Plain Text Strengths (Zero Boxes) -->
+            <div class="sb-hero-strengths-plain">
+              <span class="sb-strengths-label">CORE STRENGTHS &bull;</span>
+              <span class="sb-strengths-body">DCF Valuation &bull; 3-Statement Modeling &bull; LBO Debt Waterfalls &bull; M&amp;A Accretion/Dilution &bull; Monte Carlo VaR &bull; Bloomberg BMC &bull; Python Financial Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: The Floating 3D Coin Stage & Floating Circle Button (Image 3) -->
+        <div class="sb-hero-right">
+          <!-- Architectural Drafting Circles (Image 3) -->
+          <div class="sb-drafting-ring sb-ring-outer"></div>
+          <div class="sb-drafting-ring sb-ring-inner"></div>
+
+          <!-- Direct Interactive Overlay over the Floating 3D Coin -->
+          <div id="coinInteractiveZone" class="sb-coin-interactive-overlay" title="Drag to spin 3D coin • Scroll down to enlarge"></div>
+
+          <!-- Interactive Coin Quick Action Buttons -->
+          <div class="sb-coin-controls-row">
+            <button type="button" class="sb-coin-mini-btn" id="coinSpinFastBtn" title="Fling 3D Coin">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>SPIN 360&deg;</span>
+            </button>
+            <button type="button" class="sb-coin-mini-btn" id="coinReverseBtn" title="Reverse Rotation">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m16 3 4 4-4 4M8 21l-4-4 4-4"/><path d="M20 7H9a5 5 0 0 0-5 5v1M4 17h11a5 5 0 0 0 5-5v-1"/></svg>
+              <span>REVERSE</span>
+            </button>
+          </div>
+
+          <!-- Floating Flame-Coral Circular CTA Button (Image 3 "Смотреть кейсы →") -->
+          <a href="#portfolio" class="sb-circle-cta-btn">
+            <span>EXPLORE</span>
+            <span>PORTFOLIO</span>
+            <span class="sb-circle-cta-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HERO BOTTOM ROW: 4 SIGNATURE FOLDER-TAB CARDS (Images 2 & 3) -->
+    <div class="sb-hero-cards-grid" id="qualifications">
+      
+      <!-- Card 01/ (White Folder-Tab Card): MBA IN FINANCE -->
+      <article class="sb-tab-card">
+        <div>
+          <div class="sb-card-tab-header">
+            <span class="sb-card-index">01/</span>
+            <span class="sb-card-status-pill">ACADEMIC DEGREE</span>
+          </div>
+          <h2 class="sb-tab-card-title">MBA IN FINANCE</h2>
+          <p class="sb-tab-card-desc">
+            Master of Business Administration specializing in Corporate Finance, Investment Banking Valuation, and Capital Markets Structure.
+          </p>
+        </div>
+        <a href="#executive-summary" class="sb-tab-card-link">
+          <span>Read Curriculum</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </article>
+
+      <!-- Card 02/ (White Folder-Tab Card): CFA PROGRAM LEVEL I -->
+      <article class="sb-tab-card">
+        <div>
+          <div class="sb-card-tab-header">
+            <span class="sb-card-index">02/</span>
+            <span class="sb-card-status-pill">GLOBAL CHARTER</span>
+          </div>
+          <h2 class="sb-tab-card-title">CFA&reg; PROGRAM &bull; L-I</h2>
+          <p class="sb-tab-card-desc">
+            Candidate for Nov 2026. Rigorous 10-topic curriculum: Ethical Standards (GIPS&reg;), Financial Statement Analysis, Equity &amp; Fixed Income Valuation.
+          </p>
+        </div>
+        <a href="#certifications" class="sb-tab-card-link">
+          <span>View Syllabus</span>
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </article>
+
+      <!-- Card 03/ (Starbase Emerald Green Card like Image 2): FMVA & BMC -->
+      <article class="sb-tab-card sb-tab-card-emerald">
+        <div>
+          <div class="sb-card-tab-header">
+            <span class="sb-card-index">* 03/</span>
+            <span class="sb-card-status-pill">AUDITED &bull; VERIFIED</span>
+          </div>
+          <div class="sb-emerald-big-num">3</div>
+          <h2 class="sb-tab-card-title">FMVA&reg; &amp; BLOOMBERG BMC</h2>
+          <p class="sb-tab-card-desc">
+            120+ Audited Financial Modeling Hours (CFI) + Bloomberg Terminal Certified Operator (94% Exam Mastery Score).
+          </p>
+        </div>
+        <a href="#certifications" class="sb-tab-card-link">
+          <span>Verify Accreditations &rarr;</span>
+        </a>
+      </article>
+
+      <!-- Card 04/ (Stark Matte Black Card like Image 3 Card 04 & Image 2 Black Card): 12 AUDITED WORKS -->
+      <article class="sb-tab-card sb-tab-card-black">
+        <div>
+          <div class="sb-card-tab-header">
+            <span class="sb-card-index">04/</span>
+            <span class="sb-card-status-pill">PORTFOLIO</span>
+          </div>
+          <h2 class="sb-tab-card-title">12 AUDITED WORKS</h2>
+          <p class="sb-tab-card-desc">
+            Dynamic three-statement financial models, M&amp;A merger engines, and Monte Carlo options simulation workbooks.
+          </p>
+        </div>
+        <a href="#portfolio" class="sb-tab-card-link">
+          <span>View 12 Models &rarr;</span>
+        </a>
+      </article>
+
+    </div>
+
+    <!-- 3. SIGNATURE GROWUP SHAPED STAGE & 5 INTERACTIVE CREDIT CARDS -->
+    <section class="sb-growup-outer-wrap" id="certifications">
+      
+      <div class="sb-growup-canvas-box">
+
+        <!-- SVG Silhouette Canvas with balanced curved bottom tab (48px height) -->
+        <svg class="sb-growup-svg-canvas" viewBox="0 0 1200 700" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="sbGrowupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#C2F7D2" />
+              <stop offset="45%" stop-color="#A6F0CA" />
+              <stop offset="100%" stop-color="#88E5D7" />
+            </linearGradient>
+          </defs>
+          <path d="M 32 0 L 220 0 C 240 0, 250 26, 275 26 L 925 26 C 950 26, 960 0, 980 0 L 1168 0 A 32 32 0 0 1 1200 32 L 1200 628 A 24 24 0 0 1 1176 652 L 870 652 C 835 652, 810 700, 770 700 L 430 700 C 390 700, 365 652, 330 652 L 24 652 A 24 24 0 0 1 0 628 L 0 32 A 32 32 0 0 1 32 0 Z" 
+                fill="url(#sbGrowupGrad)" />
+        </svg>
+
+        <!-- Foreground Content Positioned Within the Lime-Mint Shaped Silhouette -->
+        <div class="sb-growup-inner-content">
+          
+          <!-- Stepped Notch Top Bar inside the Shape -->
+          <div class="sb-growup-top-notch">
+            <div class="sb-notch-brand">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              <span>PRAVEEN S &bull; CAPITAL LABS</span>
+            </div>
+
+            <div class="sb-notch-nav">
+              <span>CFA&reg; L-I</span>
+              <span>CFI FMVA&reg;</span>
+              <span>Bloomberg BMC</span>
+              <span>FINRA SIE&reg;</span>
+              <span>Quant Python</span>
+            </div>
+
+            <div class="sb-notch-right">
+              <span>MBA IN FINANCE</span>
+              <span>&bull;</span>
+              <span style="color: #0E1015; font-weight:800;">5 VERIFIED DIPLOMAS</span>
+            </div>
+          </div>
+
+          <!-- Main Split Grid: Left Intro + Right Interactive 5 Credit Card Deck -->
+          <div class="sb-growup-main-grid">
+            
+            <!-- Left Column -->
+            <div>
+              <h2 class="sb-growup-headline">
+                Simplify institutional valuation with precision.
+              </h2>
+              <p class="sb-growup-desc">
+                From dynamic three-statement financial forecasting to LBO debt waterfalls and stochastic risk engines. Audited Wall Street valuation architecture engineered for top-tier capital markets.
+              </p>
+
+              <!-- View All Button & Explore Models -->
+              <div class="sb-growup-btn-row">
+                <button type="button" class="sb-btn-view-all-certs" id="openAllCertsBtn">
+                  <span>View All Certifications</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </button>
+                <a href="#portfolio" class="sb-btn-explore-models">
+                  <span>Explore 12 Models</span>
+                  <span>&rarr;</span>
+                </a>
+              </div>
+
+              <!-- Social Proof: Star Ratings & Laurel Award -->
+              <div class="sb-growup-proof-row">
+                <div class="sb-growup-stars-col">
+                  <div class="sb-stars-gold">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                  <div class="sb-stars-lbl">Excellent 4.9 out of 5 &bull; GIPS&reg; Ethics</div>
+                </div>
+                <div class="sb-laurel-badge">
+                  <span style="font-size: 20px; line-height: 1;">&#127942;</span>
+                  <span>The world's gold-standard finance credential &bull; 2026<br /><strong>CFA&reg; Program Level I Candidate</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: 5 3D STACKED CREDIT CARDS (Click to cycle to next card!) -->
+            <div class="sb-card-deck-stage">
+              
+              <div class="sb-card-deck-stack" id="certCardDeck" title="Click card to cycle to next certification">
+                
+                <!-- Card 0: CFA Program Level I Candidate -->
+                <div class="sb-credit-card card-pos-0" id="cc-card-0" data-card-idx="0">
+                  <div class="sb-cc-top-row">
+                    <div class="sb-cc-brand-block">
+                      <div class="sb-cc-chip"><div class="sb-cc-chip-line"></div></div>
+                      <span class="sb-cc-issuer-name">CFA INSTITUTE</span>
+                    </div>
+                    <button type="button" class="sb-cc-scoop-pill cg-cert-view-btn" data-cert-svg="assets/certificates/cfa-cert.svg" data-cert-title="CFA Program Candidate — Praveen S">
+                      <span>+</span>
+                      <span>SYLLABUS</span>
+                    </button>
+                  </div>
+                  <div class="sb-cc-mid-row">
+                    <span class="sb-cc-title-lbl">OFFICIAL CHARTER CREDENTIAL</span>
+                    <h3 class="sb-cc-cert-title">CFA&reg; Program &bull; Level I Candidate</h3>
+                    <p class="sb-cc-curriculum-snippet">
+                      10 Core Topics: Ethical Standards (GIPS&reg;), Financial Statement Analysis, Equity Valuation, Fixed Income, Corporate Finance.
+                    </p>
+                  </div>
+                  <div class="sb-cc-bottom-row">
+                    <span class="sb-cc-id-tag">ID: CFA-2026-918</span>
+                    <span>TARGET: NOV 2026</span>
+                  </div>
+                  <div class="sb-cc-attached-pill">
+                    <span class="sb-cc-dots">&vellip;</span>
+                    <span class="sb-cc-microchip"></span>
+                    <span class="sb-cc-vtext">CFA&reg; L-I</span>
+                  </div>
+                </div>
+
+                <!-- Card 1: CFI FMVA Financial Modeling & Valuation Analyst -->
+                <div class="sb-credit-card card-pos-1" id="cc-card-1" data-card-idx="1">
+                  <div class="sb-cc-top-row">
+                    <div class="sb-cc-brand-block">
+                      <div class="sb-cc-chip"><div class="sb-cc-chip-line"></div></div>
+                      <span class="sb-cc-issuer-name">CFI CORPORATE FINANCE</span>
+                    </div>
+                    <button type="button" class="sb-cc-scoop-pill cg-cert-view-btn" data-cert-svg="assets/certificates/fmva-cert.svg" data-cert-title="CFI FMVA Certification — Praveen S">
+                      <span>+</span>
+                      <span>CERTIFICATE</span>
+                    </button>
+                  </div>
+                  <div class="sb-cc-mid-row">
+                    <span class="sb-cc-title-lbl">WALL STREET MODELING STANDARD</span>
+                    <h3 class="sb-cc-cert-title">FMVA&reg; &bull; Financial Modeling Analyst</h3>
+                    <p class="sb-cc-curriculum-snippet">
+                      3-Statement Dynamic Modeling, DCF Valuation, LBO Debt Waterfall, M&amp;A Accretion/Dilution, Sensitivity Tables.
+                    </p>
+                  </div>
+                  <div class="sb-cc-bottom-row">
+                    <span class="sb-cc-id-tag">REG: FMVA-8402-NY</span>
+                    <span>120+ AUDITED HRS</span>
+                  </div>
+                  <div class="sb-cc-attached-pill">
+                    <span class="sb-cc-dots">&vellip;</span>
+                    <span class="sb-cc-microchip"></span>
+                    <span class="sb-cc-vtext">FMVA&reg;</span>
+                  </div>
+                </div>
+
+                <!-- Card 2: Bloomberg Market Concepts (BMC) -->
+                <div class="sb-credit-card card-pos-2" id="cc-card-2" data-card-idx="2">
+                  <div class="sb-cc-top-row">
+                    <div class="sb-cc-brand-block">
+                      <div class="sb-cc-chip"><div class="sb-cc-chip-line"></div></div>
+                      <span class="sb-cc-issuer-name">BLOOMBERG LP</span>
+                    </div>
+                    <button type="button" class="sb-cc-scoop-pill cg-cert-view-btn" data-cert-svg="assets/certificates/bmc-cert.svg" data-cert-title="Bloomberg Market Concepts — Praveen S">
+                      <span>+</span>
+                      <span>LICENSE</span>
+                    </button>
+                  </div>
+                  <div class="sb-cc-mid-row">
+                    <span class="sb-cc-title-lbl">TERMINAL OPERATOR QUALIFICATION</span>
+                    <h3 class="sb-cc-cert-title">Bloomberg Market Concepts (BMC)</h3>
+                    <p class="sb-cc-curriculum-snippet">
+                      Economic Indicators (ECST), Foreign Exchange &amp; FX Swaps, Sovereign Yield Curves, Equities Fundamentals (FA).
+                    </p>
+                  </div>
+                  <div class="sb-cc-bottom-row">
+                    <span class="sb-cc-id-tag">KEY: BLP-8090-BMC</span>
+                    <span>94% EXAM SCORE</span>
+                  </div>
+                  <div class="sb-cc-attached-pill">
+                    <span class="sb-cc-dots">&vellip;</span>
+                    <span class="sb-cc-microchip"></span>
+                    <span class="sb-cc-vtext">BMC</span>
+                  </div>
+                </div>
+
+                <!-- Card 3: FINRA SIE Securities Industry Essentials -->
+                <div class="sb-credit-card card-pos-3" id="cc-card-3" data-card-idx="3">
+                  <div class="sb-cc-top-row">
+                    <div class="sb-cc-brand-block">
+                      <div class="sb-cc-chip"><div class="sb-cc-chip-line"></div></div>
+                      <span class="sb-cc-issuer-name">FINRA REGULATED</span>
+                    </div>
+                    <button type="button" class="sb-cc-scoop-pill cg-cert-view-btn" data-cert-svg="assets/certificates/sie-cert.svg" data-cert-title="FINRA SIE Qualification — Praveen S">
+                      <span>+</span>
+                      <span>SCOPE</span>
+                    </button>
+                  </div>
+                  <div class="sb-cc-mid-row">
+                    <span class="sb-cc-title-lbl">CAPITAL MARKETS ESSENTIALS</span>
+                    <h3 class="sb-cc-cert-title">FINRA SIE&reg; &bull; Securities Essentials</h3>
+                    <p class="sb-cc-curriculum-snippet">
+                      SEC Reg D / S / 144 Exemptions, Equity &amp; Debt Underwriting, Prohibited Trading Conduct, Series 79 Pathway.
+                    </p>
+                  </div>
+                  <div class="sb-cc-bottom-row">
+                    <span class="sb-cc-id-tag">CRD: SIE-2026-79</span>
+                    <span>SERIES 79 TARGET</span>
+                  </div>
+                  <div class="sb-cc-attached-pill">
+                    <span class="sb-cc-dots">&vellip;</span>
+                    <span class="sb-cc-microchip"></span>
+                    <span class="sb-cc-vtext">FINRA</span>
+                  </div>
+                </div>
+
+                <!-- Card 4: Python for Quant Finance (FRM Prep) -->
+                <div class="sb-credit-card card-pos-4" id="cc-card-4" data-card-idx="4">
+                  <div class="sb-cc-top-row">
+                    <div class="sb-cc-brand-block">
+                      <div class="sb-cc-chip"><div class="sb-cc-chip-line"></div></div>
+                      <span class="sb-cc-issuer-name">GARP / COMP FINANCE</span>
+                    </div>
+                    <button type="button" class="sb-cc-scoop-pill cg-cert-view-btn" data-cert-svg="assets/certificates/quant-cert.svg" data-cert-title="Python for Quant Finance — Praveen S">
+                      <span>+</span>
+                      <span>DIPLOMA</span>
+                    </button>
+                  </div>
+                  <div class="sb-cc-mid-row">
+                    <span class="sb-cc-title-lbl">STATISTICAL COMPUTING</span>
+                    <h3 class="sb-cc-cert-title">Python for Quant Finance (FRM&reg; Prep)</h3>
+                    <p class="sb-cc-curriculum-snippet">
+                      Monte Carlo Options Simulation, Parametric &amp; Historical VaR, Markowitz Efficient Frontier, NumPy Vectorization.
+                    </p>
+                  </div>
+                  <div class="sb-cc-bottom-row">
+                    <span class="sb-cc-id-tag">KERNEL: PY-RISK-26</span>
+                    <span>PYTHON 3.12 AUDITED</span>
+                  </div>
+                  <div class="sb-cc-attached-pill">
+                    <span class="sb-cc-dots">&vellip;</span>
+                    <span class="sb-cc-microchip"></span>
+                    <span class="sb-cc-vtext">QUANT</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Deck Controls: Cycle Hint & Dots -->
+              <div class="sb-deck-controls-row">
+                <span class="sb-deck-cycle-hint">CLICK CARD TO FLIP &bull; CARD <span id="deckCounter">1</span> OF 5</span>
+                <div class="sb-deck-dots-row" id="deckDotsRow">
+                  <button type="button" class="sb-deck-dot active" data-deck-dot="0" aria-label="Card 1"></button>
+                  <button type="button" class="sb-deck-dot" data-deck-dot="1" aria-label="Card 2"></button>
+                  <button type="button" class="sb-deck-dot" data-deck-dot="2" aria-label="Card 3"></button>
+                  <button type="button" class="sb-deck-dot" data-deck-dot="3" aria-label="Card 4"></button>
+                  <button type="button" class="sb-deck-dot" data-deck-dot="4" aria-label="Card 5"></button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 4. SWISS BENTO EXECUTIVE SUMMARY (8-CARD GRID - Image 4) -->
+    <section id="methodology-deck">
+      <div class="sb-section-header-block">
+        <div>
+          <div class="sb-section-tag">
+            <span class="sb-tag-dot"></span>
+            <span>SECTION 02 &bull; FRAMEWORKS</span>
+          </div>
+          <h2 class="sb-section-title">EXECUTIVE METHODOLOGY &amp; RIGOR</h2>
+        </div>
+        <div class="sb-pill-badge">
+          <span>SWISS BENTO DECK (08)</span>
+        </div>
+      </div>
+
+      <div class="sb-swiss-bento-grid">
+        
+        <!-- Card 1: Matte Black SECTION 1 (Image 4 Top Left) -->
+        <article class="sb-swiss-card sb-swiss-card-dark">
+          <div class="sb-swiss-card-head">
+            <span class="sb-card-status-pill" style="background: rgba(255,255,255,0.12); color:#FFF; border-color:rgba(255,255,255,0.2);">SECTION 1</span>
+            <span class="sb-circle-arrow-btn">&rarr;</span>
+          </div>
+          <div class="sb-swiss-bignum">01</div>
+          <h3 class="sb-swiss-title" style="font-size: 21px;">Executive<br />Summary</h3>
+          <p class="sb-swiss-body">
+            Setting the institutional standard for financial valuation, modeling hygiene, and buy-side research frameworks.
+          </p>
+        </article>
+
+        <!-- Card 2: White Card with Checkmark Fact Pills (Image 4 Top Card 2) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">CORE COMPETENCY</span>
+            <span class="sb-circle-arrow-btn">&searr;</span>
+          </div>
+          <h3 class="sb-swiss-title">Three-Statement Dynamic Modeling &amp; DCF</h3>
+          <p class="sb-swiss-body">
+            Reconciling Income Statements, Cash Flow Statements, and Balance Sheets with dynamic debt schedules and multi-stage WACC calculations.
+          </p>
+          <div class="sb-fact-pills-row">
+            <div class="sb-fact-pill">
+              <span>Fact 1: Dynamic Balance Ties</span>
+              <span class="sb-fact-check">&#10003;</span>
+            </div>
+            <div class="sb-fact-pill">
+              <span>Fact 2: 0 Circular Errors</span>
+              <span class="sb-fact-check">&#10003;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Mission & Vision (Image 4 Top Card 3) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">OUR MISSION</span>
+            <span class="sb-circle-arrow-btn">&nearr;</span>
+          </div>
+          <h3 class="sb-swiss-title" style="font-size: 22px;">We empower analytical precision.</h3>
+          <p class="sb-swiss-body">
+            Transitioning subjective equity theses into auditable, quantitative valuation models built upon rigorous corporate finance theory and audited empirical data.
+          </p>
+          <div class="sb-metric-strip">
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">Audited</span>
+              <span class="sb-metric-val">120h+</span>
+            </div>
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">Hygiene</span>
+              <span class="sb-metric-val">100%</span>
+            </div>
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">Models</span>
+              <span class="sb-metric-val">12</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Quantitative Profile (Image 4 Top Card 4) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">ACCREDITED</span>
+            <span class="sb-circle-arrow-btn">&nearr;</span>
+          </div>
+          <h3 class="sb-swiss-title">Bloomberg Terminal &amp; Market Intelligence</h3>
+          <p class="sb-swiss-body">
+            Certified operator across ECST economic indicators, FX currency swap pricing, sovereign yield curves, and FA equity comparables.
+          </p>
+          <div class="sb-fact-pills-row">
+            <div class="sb-fact-pill">
+              <span>BMC Exam Score</span>
+              <span class="sb-fact-check">94%</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Matte Black Problem Solving Card (Image 4 Bottom Card 1) -->
+        <article class="sb-swiss-card sb-swiss-card-dark">
+          <div class="sb-swiss-card-head">
+            <span class="sb-card-status-pill" style="background: rgba(255,255,255,0.12); color:#FFF; border-color:rgba(255,255,255,0.2);">METHODOLOGY</span>
+            <span class="sb-circle-arrow-btn">&rarr;</span>
+          </div>
+          <h3 class="sb-swiss-title" style="color: #FFF;">Capital Markets Problem Solving</h3>
+          <p class="sb-swiss-body">
+            1. Sensitivity Data Tables (Perpetual Growth vs Exit Multiples)<br />
+            2. LBO Debt Waterfall &amp; Sponsor Returns (IRR / MoIC)<br />
+            3. M&amp;A Accretion/Dilution with Synergies &amp; Pro-Forma EPS
+          </p>
+        </article>
+
+        <!-- Card 6: Value & Quant Card (Image 4 Bottom Card 2) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">QUANT ENGINE</span>
+            <span class="sb-circle-arrow-btn">&searr;</span>
+          </div>
+          <h3 class="sb-swiss-title">Python 3.12 Stochastic Simulations</h3>
+          <p class="sb-swiss-body">
+            Vectorized NumPy options engines computing Black-Scholes Greeks, Monte Carlo asset price trajectories, and 99% parametric Value-at-Risk (VaR).
+          </p>
+          <div class="sb-fact-pills-row">
+            <div class="sb-fact-pill">
+              <span>NumPy Vectorized</span>
+              <span class="sb-fact-check">&#10003;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Regulatory & Compliance (Image 4 Bottom Card 3) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">REGULATORY</span>
+            <span class="sb-circle-arrow-btn">&nearr;</span>
+          </div>
+          <h3 class="sb-swiss-title">FINRA SIE&reg; &amp; SEC Frameworks</h3>
+          <p class="sb-swiss-body">
+            Qualified in capital markets regulation, SEC Reg D / S / 144 exemptions, equity/debt underwriting mechanics, and Series 79 investment banking pathway.
+          </p>
+          <div class="sb-fact-pills-row">
+            <div class="sb-fact-pill">
+              <span>Series 79 Target</span>
+              <span class="sb-fact-check">&#10003;</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: 2026 In Numbers Metric Deck (Image 4 Bottom Card 4) -->
+        <article class="sb-swiss-card">
+          <div class="sb-swiss-card-head">
+            <span class="sb-pill-badge" style="font-size: 9px; padding: 2px 8px;">FINANCIALS</span>
+            <span class="sb-circle-arrow-btn">&nearr;</span>
+          </div>
+          <h3 class="sb-swiss-title" style="font-size: 22px;">2026 in numbers.</h3>
+          <p class="sb-swiss-body">
+            Audited research track record reflecting dedication to corporate valuation excellence.
+          </p>
+          <div class="sb-metric-strip">
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">Models</span>
+              <span class="sb-metric-val">12</span>
+            </div>
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">BMC</span>
+              <span class="sb-metric-val">94%</span>
+            </div>
+            <div class="sb-metric-cell">
+              <span class="sb-metric-lbl">Certs</span>
+              <span class="sb-metric-val">05</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 5. VERIFIED ACCREDITATIONS & CERTIFICATIONS (05 - STARBASE FOLDER TABS Image 2) -->
+    <section id="certifications">
+      <div class="sb-section-header-block">
+        <div>
+          <div class="sb-section-tag">
+            <span class="sb-tag-dot"></span>
+            <span>ACCREDITATIONS &bull; PRAVEEN S</span>
+          </div>
+          <h2 class="sb-section-title">VERIFIED INSTITUTIONAL CERTIFICATIONS (05)</h2>
+        </div>
+        <div class="sb-pill-badge sb-pill-badge-emerald">
+          <span>● 5 VERIFIED CREDENTIALS</span>
+        </div>
+      </div>
+
+      <div class="sb-certs-grid">
+
+        <!-- 1. CFA Candidate -->
+        <article class="sb-cert-folder-card">
+          <div>
+            <div class="sb-cert-tab-bar">
+              <span class="sb-cert-index-stamp">1/5</span>
+              <span class="sb-cert-remote-tag">CFA&reg; CANDIDATE</span>
+            </div>
+            <span class="sb-cert-issuer-label">CFA Institute</span>
+            <h3 class="sb-cert-card-title">CFA&reg; Program • Level I Candidate</h3>
+            <p class="sb-cert-card-desc">
+              Rigorous global investment curriculum covering asset valuation, financial statement analysis, corporate issuers, and ethical standards (GIPS&reg;).
+            </p>
+            <div class="sb-cert-pill-list">
+              <span class="sb-cert-topic-tag">Ethical Standards</span>
+              <span class="sb-cert-topic-tag">Financial Statement Analysis</span>
+              <span class="sb-cert-topic-tag">Equity Valuation</span>
+              <span class="sb-cert-topic-tag">Fixed Income</span>
+              <span class="sb-cert-topic-tag">Quantitative Methods</span>
+              <span class="sb-cert-topic-tag">Corporate Finance</span>
+            </div>
+          </div>
+          <div class="sb-cert-card-bottom">
+            <span class="sb-cert-reg-code">ID: CFA-2026-918</span>
+            <button class="sb-cert-open-btn cg-cert-view-btn" data-cert-svg="assets/certificates/cfa-cert.svg" data-cert-title="CFA&reg; Program Candidate — Praveen S">
+              <span>View Certificate</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 2. CFI FMVA -->
+        <article class="sb-cert-folder-card">
+          <div>
+            <div class="sb-cert-tab-bar">
+              <span class="sb-cert-index-stamp">2/5</span>
+              <span class="sb-cert-remote-tag">FMVA&reg; CERTIFIED</span>
+            </div>
+            <span class="sb-cert-issuer-label">Corporate Finance Institute (CFI)</span>
+            <h3 class="sb-cert-card-title">FMVA&reg; • Financial Modeling &amp; Valuation Analyst</h3>
+            <p class="sb-cert-card-desc">
+              Wall Street-standard financial modeling credential covering 3-statement dynamic forecasting, DCF valuation, debt schedules, and M&amp;A/LBO transactions.
+            </p>
+            <div class="sb-cert-pill-list">
+              <span class="sb-cert-topic-tag">3-Statement Modeling</span>
+              <span class="sb-cert-topic-tag">DCF Valuation</span>
+              <span class="sb-cert-topic-tag">LBO Debt Waterfall</span>
+              <span class="sb-cert-topic-tag">M&amp;A Accretion/Dilution</span>
+              <span class="sb-cert-topic-tag">Sensitivity Data Tables</span>
+            </div>
+          </div>
+          <div class="sb-cert-card-bottom">
+            <span class="sb-cert-reg-code">REG: FMVA-8402-NY</span>
+            <button class="sb-cert-open-btn cg-cert-view-btn" data-cert-svg="assets/certificates/fmva-cert.svg" data-cert-title="CFI FMVA&reg; Certification — Praveen S">
+              <span>View Certificate</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 3. Bloomberg BMC -->
+        <article class="sb-cert-folder-card">
+          <div>
+            <div class="sb-cert-tab-bar">
+              <span class="sb-cert-index-stamp">3/5</span>
+              <span class="sb-cert-remote-tag">BLOOMBERG BMC</span>
+            </div>
+            <span class="sb-cert-issuer-label">Bloomberg LP</span>
+            <h3 class="sb-cert-card-title">Bloomberg Market Concepts (BMC)</h3>
+            <p class="sb-cert-card-desc">
+              Interactive terminal qualification covering economic indicators, foreign exchange and currency swaps, sovereign yield curves, and corporate fundamentals.
+            </p>
+            <div class="sb-cert-pill-list">
+              <span class="sb-cert-topic-tag">Economic Indicators (ECST)</span>
+              <span class="sb-cert-topic-tag">Currencies &amp; FX Swaps</span>
+              <span class="sb-cert-topic-tag">Yield Curves</span>
+              <span class="sb-cert-topic-tag">Equities Fundamentals</span>
+              <span class="sb-cert-topic-tag">Terminal Operator (94%)</span>
+            </div>
+          </div>
+          <div class="sb-cert-card-bottom">
+            <span class="sb-cert-reg-code">KEY: BLP-8090-BMC</span>
+            <button class="sb-cert-open-btn cg-cert-view-btn" data-cert-svg="assets/certificates/bmc-cert.svg" data-cert-title="Bloomberg Market Concepts — Praveen S">
+              <span>View Certificate</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. FINRA SIE -->
+        <article class="sb-cert-folder-card">
+          <div>
+            <div class="sb-cert-tab-bar">
+              <span class="sb-cert-index-stamp">4/5</span>
+              <span class="sb-cert-remote-tag">FINRA QUALIFIED</span>
+            </div>
+            <span class="sb-cert-issuer-label">FINRA</span>
+            <h3 class="sb-cert-card-title">FINRA SIE&reg; • Securities Industry Essentials</h3>
+            <p class="sb-cert-card-desc">
+              Regulatory qualification on foundational capital markets knowledge, SEC registration frameworks, equity and debt underwriting, and customer account compliance.
+            </p>
+            <div class="sb-cert-pill-list">
+              <span class="sb-cert-topic-tag">Capital Markets Structure</span>
+              <span class="sb-cert-topic-tag">SEC Reg D / S / 144</span>
+              <span class="sb-cert-topic-tag">Debt &amp; Equity Underwriting</span>
+              <span class="sb-cert-topic-tag">Trading Conduct</span>
+              <span class="sb-cert-topic-tag">Series 79 Pathway</span>
+            </div>
+          </div>
+          <div class="sb-cert-card-bottom">
+            <span class="sb-cert-reg-code">CRD: SIE-2026-79</span>
+            <button class="sb-cert-open-btn cg-cert-view-btn" data-cert-svg="assets/certificates/sie-cert.svg" data-cert-title="FINRA SIE&reg; Qualification — Praveen S">
+              <span>View Certificate</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- 5. Python for Quant Finance -->
+        <article class="sb-cert-folder-card">
+          <div>
+            <div class="sb-cert-tab-bar">
+              <span class="sb-cert-index-stamp">5/5</span>
+              <span class="sb-cert-remote-tag">QUANT VERIFIED</span>
+            </div>
+            <span class="sb-cert-issuer-label">GARP / Comp Finance</span>
+            <h3 class="sb-cert-card-title">Python for Quant Finance (FRM&reg; Prep)</h3>
+            <p class="sb-cert-card-desc">
+              Statistical programming in Python 3.12, implementing Monte Carlo options simulation, parametric and historical Value-at-Risk (VaR), and factor backtesting.
+            </p>
+            <div class="sb-cert-pill-list">
+              <span class="sb-cert-topic-tag">Monte Carlo Simulations</span>
+              <span class="sb-cert-topic-tag">Value-at-Risk (VaR)</span>
+              <span class="sb-cert-topic-tag">Markowitz Optimization</span>
+              <span class="sb-cert-topic-tag">NumPy Vectorization</span>
+              <span class="sb-cert-topic-tag">Factor Regressions</span>
+            </div>
+          </div>
+          <div class="sb-cert-card-bottom">
+            <span class="sb-cert-reg-code">KERNEL: PY-RISK-26</span>
+            <button class="sb-cert-open-btn cg-cert-view-btn" data-cert-svg="assets/certificates/quant-cert.svg" data-cert-title="Python for Quant Finance — Praveen S">
+              <span>View Certificate</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 6. AUDITED PORTFOLIO (FILE FOLDER DOSSIER ARCHITECTURE - "LIKE THE FILES...") -->
+    <section id="portfolio" class="sb-portfolio-files-section">
+      <div class="sb-section-header-block">
+        <div>
+          <div class="sb-section-tag">
+            <span class="sb-tag-dot"></span>
+            <span>PUBLISHED WORKS &bull; PRAVEEN S</span>
+          </div>
+          <h2 class="sb-section-title">MY PORTFOLIO: FINANCIAL VALUATION, MODELING &amp; RESEARCH</h2>
+        </div>
+        <div class="sb-pill-badge">
+          <span>12 AUDITED FINANCIAL MODELS</span>
+        </div>
+      </div>
+
+      <!-- SINGLE MASTER FILE FOLDER (ALL 6 PROJECTS IN ONE FOLDER CARD) -->
+      <div class="sb-master-folder-wrapper">
+        <!-- Top Rim Stepped Tab Bar: Projects 01 - 06 -->
+        <div class="sb-master-tab-bar" role="tablist" aria-label="Portfolio Projects">
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-blue active" data-tab-idx="0" role="tab" aria-selected="true" aria-controls="sb-proj-panel-0">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 01</span>
+              <span class="sb-tab-tag">QUANT</span>
+            </span>
+          </button>
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-yellow" data-tab-idx="1" role="tab" aria-selected="false" aria-controls="sb-proj-panel-1">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 02</span>
+              <span class="sb-tab-tag">M&amp;A</span>
+            </span>
+          </button>
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-mint" data-tab-idx="2" role="tab" aria-selected="false" aria-controls="sb-proj-panel-2">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 03</span>
+              <span class="sb-tab-tag">LBO</span>
+            </span>
+          </button>
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-peach" data-tab-idx="3" role="tab" aria-selected="false" aria-controls="sb-proj-panel-3">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 04</span>
+              <span class="sb-tab-tag">MACRO</span>
+            </span>
+          </button>
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-lavender" data-tab-idx="4" role="tab" aria-selected="false" aria-controls="sb-proj-panel-4">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 05</span>
+              <span class="sb-tab-tag">ENERGY</span>
+            </span>
+          </button>
+          <button type="button" class="sb-master-tab-btn sb-tab-pastel-rose" data-tab-idx="5" role="tab" aria-selected="false" aria-controls="sb-proj-panel-5">
+            <span class="sb-tab-inner">
+              <span class="sb-tab-label">+ PROJECT 06</span>
+              <span class="sb-tab-tag">SEMIS</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Master File Folder Body Card -->
+        <div class="sb-single-file-folder theme-pastel-blue sb-tab-0-active">
+          <!-- Panel 0: Project 01 (Active) -->
+          <div class="sb-folder-panel active" id="sb-proj-panel-0" role="tabpanel" aria-label="Project 01: Arbitrage-Free SVI Volatility Surface Engine">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>MAR 3, 2026 &bull; SVI VOLATILITY MODEL</span>
+                </div>
+                <h3 class="sb-folder-title">Arbitrage-Free SVI Volatility Surface Engine</h3>
+                <p class="sb-folder-desc">
+                  Real-time stochastic volatility calibration across 42,000+ SPX &amp; NDX options with sub-2ms Greek computation, zero negative variance arbitrage, and dynamic strike interpolation.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">SHARPE RATIO</span>
+                    <span class="sb-kpi-val">2.68x (+410 bps)</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">LATENCY</span>
+                    <span class="sb-kpi-val">1.4 ms</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">C++20 / Python</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-vol-surface">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">SYS://SVI-SURFACE.ENG</span>
+                      <span class="sb-sheet-status">CALIBRATED</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <line x1="20" y1="20" x2="360" y2="20" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 3"/>
+                        <line x1="20" y1="60" x2="360" y2="60" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 3"/>
+                        <line x1="20" y1="100" x2="360" y2="100" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3 3"/>
+                        <path d="M 30 105 Q 120 110, 190 70 T 350 30" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M 30 90 Q 130 95, 200 55 T 350 18" stroke="#FF4A22" stroke-width="2" stroke-dasharray="4 4"/>
+                        <circle cx="120" cy="110" r="3.5" fill="#38BDF8"/>
+                        <circle cx="190" cy="70" r="3.5" fill="#38BDF8"/>
+                        <circle cx="280" cy="45" r="3.5" fill="#38BDF8"/>
+                        <circle cx="350" cy="30" r="3.5" fill="#38BDF8"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>TICK: SPX/NDX 42K</span>
+                      <span>P&amp;L: +$4.82M</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 1: Project 02 -->
+          <div class="sb-folder-panel" id="sb-proj-panel-1" role="tabpanel" aria-label="Project 02: Enterprise SaaS Cross-Border Merger Engine">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>JAN 3, 2026 &bull; M&amp;A CAPITAL STRUCTURE</span>
+                </div>
+                <h3 class="sb-folder-title">Enterprise SaaS Cross-Border Merger Engine</h3>
+                <p class="sb-folder-desc">
+                  $4.2B multi-currency accretion/dilution transaction model with tax-shield optimization, synergized multi-entity balance sheets, and dynamic sensitivity tables.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">TRANSACTION</span>
+                    <span class="sb-kpi-val">$4.2B USD</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">ACCRETION</span>
+                    <span class="sb-kpi-val">+14.2% Y1</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">Excel / VBA / Python</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-saas-ma">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">M&amp;A // $4.2B SYNERGY</span>
+                      <span class="sb-sheet-status">ACCRETIVE</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <rect x="30" y="70" width="36" height="50" rx="4" fill="#E5A835"/>
+                        <rect x="85" y="50" width="36" height="30" rx="4" fill="#34D399"/>
+                        <rect x="140" y="38" width="36" height="25" rx="4" fill="#10B981"/>
+                        <rect x="195" y="45" width="36" height="18" rx="4" fill="#EF4444"/>
+                        <rect x="250" y="20" width="45" height="100" rx="4" fill="#38BDF8"/>
+                        <line x1="66" y1="70" x2="85" y2="70" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 2"/>
+                        <line x1="121" y1="50" x2="140" y2="50" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 2"/>
+                        <line x1="176" y1="38" x2="195" y2="38" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 2"/>
+                        <line x1="231" y1="45" x2="250" y2="45" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2 2"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>TAX SHIELD: $184M</span>
+                      <span>PRO-FORMA IRR: 24.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Project 03 -->
+          <div class="sb-folder-panel" id="sb-proj-panel-2" role="tabpanel" aria-label="Project 03: Hyperscale AI Cloud Infrastructure LBO">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>NOV 18, 2025 &bull; SPONSOR LBO WATERFALL</span>
+                </div>
+                <h3 class="sb-folder-title">Hyperscale AI Cloud Infrastructure LBO</h3>
+                <p class="sb-folder-desc">
+                  $1.8B GPU cluster buyout model with senior-stretched debt tranche, dynamic capex depreciation, cash flow sweep, and exit multiple sensitivity.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">PROJECTED IRR</span>
+                    <span class="sb-kpi-val">28.4% Net</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">MOIC TARGET</span>
+                    <span class="sb-kpi-val">3.2x Exit</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">LBO Waterfall</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-distressed-credit">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">PE // $1.80B BUYOUT</span>
+                      <span class="sb-sheet-status">SPONSOR RUN</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <path d="M 25 35 Q 120 45, 200 75 T 355 110" stroke="#F87171" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M 25 105 Q 140 90, 220 50 T 355 18" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+                        <circle cx="25" cy="105" r="3.5" fill="#34D399"/>
+                        <circle cx="180" cy="65" r="3.5" fill="#34D399"/>
+                        <circle cx="355" cy="18" r="3.5" fill="#34D399"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>LEVERAGE: 4.8x EBITDA</span>
+                      <span>EXIT: 14.5x EBITDA</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Project 04 -->
+          <div class="sb-folder-panel" id="sb-proj-panel-3" role="tabpanel" aria-label="Project 04: Fed Overnight Reverse Repo Liquidity Forecast">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>SEP 12, 2025 &bull; MACRO LIQUIDITY REGIMES</span>
+                </div>
+                <h3 class="sb-folder-title">Fed Overnight Reverse Repo Liquidity Forecast</h3>
+                <p class="sb-folder-desc">
+                  Econometric forecasting model linking ON RRP drainage to commercial bank reserve dispersion, repo spread spikes, and SOFR rate volatility.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">R-SQUARED</span>
+                    <span class="sb-kpi-val">0.934 OOS</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">DATA HORIZON</span>
+                    <span class="sb-kpi-val">10-Yr Tick</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">Statsmodels</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-macro-liquidity">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">FED // ON RRP &amp; SOFR</span>
+                      <span class="sb-sheet-status">ECONOMETRIC</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <path d="M 20 25 L 80 32 L 140 45 L 200 68 L 260 92 L 320 108 L 360 115" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M 20 112 L 80 105 L 140 98 L 200 78 L 260 52 L 320 38 L 360 22" stroke="#E5A835" stroke-width="2.5" stroke-linecap="round"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>RUNOFF: -$1.82T</span>
+                      <span>CONFIDENCE: 99%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Project 05 -->
+          <div class="sb-folder-panel" id="sb-proj-panel-4" role="tabpanel" aria-label="Project 05: Clean Energy PPA Spark-Spread Monte Carlo">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>JUL 24, 2025 &bull; STOCHASTIC POWER CONTRACTS</span>
+                </div>
+                <h3 class="sb-folder-title">Clean Energy PPA Spark-Spread Monte Carlo</h3>
+                <p class="sb-folder-desc">
+                  100,000-path stochastic power contract valuation with jump-diffusion wind generation variability, hourly dispatch optimization, and peak-load hedges.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">SAMPLE PATHS</span>
+                    <span class="sb-kpi-val">100,000 Sim</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">CONFIDENCE</span>
+                    <span class="sb-kpi-val">99% CVaR</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">Monte Carlo</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-offshore-wind">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">SIM // 100K DISPERSION</span>
+                      <span class="sb-sheet-status">CVaR 99%</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <polygon points="30,65 140,40 250,25 350,15 350,115 250,105 140,90 30,65" fill="rgba(56,189,248,0.12)"/>
+                        <polygon points="30,65 140,50 250,40 350,30 350,100 250,90 140,80 30,65" fill="rgba(56,189,248,0.20)"/>
+                        <path d="M 30 65 Q 160 62, 350 58" stroke="#38BDF8" stroke-width="2.5"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>PPA EV: $2.40B</span>
+                      <span>HEDGE RATIO: 82%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 5: Project 06 -->
+          <div class="sb-folder-panel" id="sb-proj-panel-5" role="tabpanel" aria-label="Project 06: Foundry Semiconductor Multi-Stage DCF">
+            <div class="sb-folder-grid">
+              <div class="sb-folder-info-col">
+                <div class="sb-folder-meta">
+                  <span class="sb-folder-dot"></span>
+                  <span>MAY 15, 2025 &bull; EQUITY RESEARCH</span>
+                </div>
+                <h3 class="sb-folder-title">Foundry Semiconductor Multi-Stage DCF</h3>
+                <p class="sb-folder-desc">
+                  Bottom-up wafer pricing and fab yield ramp model incorporating advanced CoWoS packaging margin expansion across 18 global semiconductor leaders.
+                </p>
+                <div class="sb-folder-kpis">
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">TARGET PRICE</span>
+                    <span class="sb-kpi-val">$215 (+34%)</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">WACC DISCOUNT</span>
+                    <span class="sb-kpi-val">8.75% Beta</span>
+                  </div>
+                  <div class="sb-folder-kpi">
+                    <span class="sb-kpi-lbl">STACK</span>
+                    <span class="sb-kpi-val">DCF Sensitivity</span>
+                  </div>
+                </div>
+                <div class="sb-folder-action">
+                  <button type="button" class="sb-folder-view-btn" data-work-id="work-semis-initiation">
+                    <span>VIEW PROJECT</span>
+                    <span class="sb-folder-arrow">&rarr;</span>
+                  </button>
+                </div>
+              </div>
+              <div class="sb-folder-right">
+                <div class="sb-taped-sheet">
+                  <div class="sb-tape sb-tape-tl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-tr" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-bl" aria-hidden="true"></div>
+                  <div class="sb-tape sb-tape-br" aria-hidden="true"></div>
+                  <div class="sb-sheet-content">
+                    <div class="sb-sheet-topbar">
+                      <span class="sb-sheet-id">RESEARCH // ADVANCED PACKAGING</span>
+                      <span class="sb-sheet-status">OUTPERFORM</span>
+                    </div>
+                    <div class="sb-sheet-chart-wrap">
+                      <svg viewBox="0 0 380 130" fill="none" class="sb-sheet-svg">
+                        <path d="M 20 100 Q 140 92, 220 55 T 360 18" stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round"/>
+                        <circle cx="20" cy="100" r="3.5" fill="#FBBF24"/>
+                        <circle cx="140" cy="92" r="3.5" fill="#FBBF24"/>
+                        <circle cx="220" cy="55" r="3.5" fill="#FBBF24"/>
+                        <circle cx="360" cy="18" r="3.5" fill="#FBBF24"/>
+                      </svg>
+                    </div>
+                    <div class="sb-sheet-meta-footer">
+                      <span>ROIC: 26.8%</span>
+                      <span>IMPLIED UPSIDE: +34.2%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & FOOTER (Image 2 Black Card & Image 3) -->
+    <footer class="sb-footer-box" id="contact">
+      <div class="sb-footer-layout">
+        <div>
+          <h2 class="sb-footer-title">GET IN TOUCH.</h2>
+          <p class="sb-footer-subtitle">
+            Open for investment banking analyst mandates, equity research associateships, and quantitative capital markets inquiries.
+          </p>
+
+          <div class="sb-contact-info-list">
+            <div class="sb-contact-item">
+              <span>EMAIL:</span>
+              <strong>praveen.finance@outlook.com</strong>
+            </div>
+            <div class="sb-contact-item">
+              <span>LOCATION:</span>
+              <strong>Global Financial Centers / New York / Remote</strong>
+            </div>
+            <div class="sb-contact-item">
+              <span>DEGREE:</span>
+              <strong>MBA in Finance &bull; CFA&reg; Program Level I Candidate</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="sb-footer-right-card">
+          <div style="font-family: var(--sb-font-mono); font-size: 11px; color: var(--sb-coral); font-weight:700;">
+            ● DIRECT CONNECT
+          </div>
+          <p style="font-family: var(--sb-font-body); font-size: 13px; color: #CCC; margin:0; line-height: 1.5;">
+            Download comprehensive financial models or review audited balance sheet workbooks directly.
+          </p>
+          <a href="mailto:praveen.finance@outlook.com" class="sb-btn-black-pill" style="background: var(--sb-coral); border-color: var(--sb-coral); align-self: flex-start;">
+            <span>MESSAGE PRAVEEN S</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sb-footer-meta-row">
+        <div>&copy; 2026 PRAVEEN S &bull; ALL RIGHTS RESERVED</div>
+        <div>MINIMALIST ARCHITECTURAL EDITION &bull; 120 FPS</div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Protected Full-Screen Certificate Lightbox Modal -->
+  <div class="cert-lightbox-modal" id="certLightboxModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Certificate Preview">
+    <div class="lightbox-content-box">
+      <div class="lightbox-header">
+        <span class="lightbox-title" id="lightboxTitle">Official Protected Certificate &mdash; Praveen S</span>
+        <div class="lightbox-actions">
+          <span class="lightbox-protected-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Protected Document</span>
+          </span>
+          <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close Preview">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+      <div class="lightbox-img-wrap" oncontextmenu="return false;" ondragstart="return false;">
+        <img src="" alt="Official Protected Certificate &mdash; Praveen S" class="lightbox-img" id="lightboxImg" draggable="false" />
+        <div class="cert-protection-shield" aria-hidden="true" title="Protected Institutional Document"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEDICATED FULL DOSSIER MODAL ("VIEW ALL CERTIFICATIONS" PAGE) -->
+  <div class="sb-all-certs-dossier-modal" id="allCertsDossierModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="All Certifications Dossier">
+    <div class="sb-dossier-content-card">
+      
+      <div class="sb-dossier-header">
+        <div class="sb-dossier-title-block">
+          <h3>OFFICIAL ACCREDITATIONS &amp; CREDENTIALS DOSSIER</h3>
+          <p>PRAVEEN S &bull; MBA IN FINANCE &bull; CFA&reg; PROGRAM LEVEL I CANDIDATE</p>
+        </div>
+        <button type="button" class="sb-dossier-close-btn" id="closeAllCertsBtn" aria-label="Close Dossier">
+          &times;
+        </button>
+      </div>
+
+      <div class="sb-dossier-scroll-body">
+        
+        <!-- Dossier Cert 1: CFA Program -->
+        <article class="sb-dossier-cert-box">
+          <div class="sb-dossier-cert-info">
+            <div class="sb-dossier-cert-meta">
+              <span class="sb-dossier-issuer">CFA Institute &bull; Charlottesville, VA</span>
+              <span class="sb-dossier-status-pill">GLOBAL CHARTER CANDIDATE</span>
+            </div>
+            <h4 class="sb-dossier-cert-name">CFA&reg; Program &bull; Level I Candidate</h4>
+            <p class="sb-dossier-cert-desc">
+              Comprehensive mastery across 10 core investment disciplines: Ethical &amp; Professional Standards (GIPS&reg; compliance), Financial Statement Analysis (IFRS &amp; US GAAP), Corporate Issuers, Equity Valuation, Fixed Income, Derivatives, and Portfolio Risk Management.
+            </p>
+            <div class="sb-dossier-topic-tags">
+              <span class="sb-dossier-topic-tag">Ethical Standards (GIPS&reg;)</span>
+              <span class="sb-dossier-topic-tag">Financial Statement Analysis</span>
+              <span class="sb-dossier-topic-tag">Equity Valuation &amp; DCF</span>
+              <span class="sb-dossier-topic-tag">Fixed Income &amp; Duration</span>
+              <span class="sb-dossier-topic-tag">Corporate Finance</span>
+              <span class="sb-dossier-topic-tag">Quantitative Methods</span>
+            </div>
+          </div>
+          <div class="sb-dossier-cert-side">
+            <div>
+              <div class="sb-dossier-cert-id">REG: CFA-2026-918</div>
+              <div style="font-family: var(--sb-font-mono); font-size: 10px; color:#10B981; font-weight:700; margin-top:3px;">● TARGET: NOV 2026</div>
+            </div>
+            <button type="button" class="sb-dossier-view-btn cg-cert-view-btn" data-cert-svg="assets/certificates/cfa-cert.svg" data-cert-title="CFA&reg; Program Candidate — Praveen S">
+              <span>View Official Diploma</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Dossier Cert 2: CFI FMVA -->
+        <article class="sb-dossier-cert-box">
+          <div class="sb-dossier-cert-info">
+            <div class="sb-dossier-cert-meta">
+              <span class="sb-dossier-issuer">Corporate Finance Institute (CFI)</span>
+              <span class="sb-dossier-status-pill">FMVA&reg; CERTIFIED</span>
+            </div>
+            <h4 class="sb-dossier-cert-name">FMVA&reg; &bull; Financial Modeling &amp; Valuation Analyst</h4>
+            <p class="sb-dossier-cert-desc">
+              Accredited Wall Street-standard financial modeling curriculum comprising 120+ audited training hours. Specialization in fully integrated dynamic 3-statement models, DCF valuations, leveraged buyout (LBO) debt schedules, M&amp;A accretion/dilution models, and scenario sensitivity tables.
+            </p>
+            <div class="sb-dossier-topic-tags">
+              <span class="sb-dossier-topic-tag">3-Statement Integrated Models</span>
+              <span class="sb-dossier-topic-tag">Multi-Stage DCF Valuation</span>
+              <span class="sb-dossier-topic-tag">LBO Debt Waterfalls</span>
+              <span class="sb-dossier-topic-tag">M&amp;A Accretion / Dilution</span>
+              <span class="sb-dossier-topic-tag">Sensitivity &amp; Scenario Matrices</span>
+            </div>
+          </div>
+          <div class="sb-dossier-cert-side">
+            <div>
+              <div class="sb-dossier-cert-id">REG: FMVA-8402-NY</div>
+              <div style="font-family: var(--sb-font-mono); font-size: 10px; color:#10B981; font-weight:700; margin-top:3px;">● 120+ AUDITED HRS</div>
+            </div>
+            <button type="button" class="sb-dossier-view-btn cg-cert-view-btn" data-cert-svg="assets/certificates/fmva-cert.svg" data-cert-title="CFI FMVA&reg; Certification — Praveen S">
+              <span>View Official Diploma</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Dossier Cert 3: Bloomberg BMC -->
+        <article class="sb-dossier-cert-box">
+          <div class="sb-dossier-cert-info">
+            <div class="sb-dossier-cert-meta">
+              <span class="sb-dossier-issuer">Bloomberg LP &bull; New York</span>
+              <span class="sb-dossier-status-pill">CERTIFIED OPERATOR</span>
+            </div>
+            <h4 class="sb-dossier-cert-name">Bloomberg Market Concepts (BMC)</h4>
+            <p class="sb-dossier-cert-desc">
+              Certified Bloomberg Terminal proficiency with a verified 94% examination score. Deep interactive command workflows across Economic Indicators (ECST), Foreign Exchange &amp; Cross-Currency Swaps, Sovereign Yield Curves &amp; Term Premia, and Equity Fundamental Analysis (FA).
+            </p>
+            <div class="sb-dossier-topic-tags">
+              <span class="sb-dossier-topic-tag">Economic Indicators (ECST)</span>
+              <span class="sb-dossier-topic-tag">Foreign Exchange &amp; FX Swaps</span>
+              <span class="sb-dossier-topic-tag">Sovereign Yield Curves</span>
+              <span class="sb-dossier-topic-tag">Equities Fundamentals (FA)</span>
+              <span class="sb-dossier-topic-tag">Terminal Command Navigation</span>
+            </div>
+          </div>
+          <div class="sb-dossier-cert-side">
+            <div>
+              <div class="sb-dossier-cert-id">KEY: BLP-8090-BMC</div>
+              <div style="font-family: var(--sb-font-mono); font-size: 10px; color:#10B981; font-weight:700; margin-top:3px;">● 94% EXAM MASTERY</div>
+            </div>
+            <button type="button" class="sb-dossier-view-btn cg-cert-view-btn" data-cert-svg="assets/certificates/bmc-cert.svg" data-cert-title="Bloomberg Market Concepts — Praveen S">
+              <span>View Official Diploma</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Dossier Cert 4: FINRA SIE -->
+        <article class="sb-dossier-cert-box">
+          <div class="sb-dossier-cert-info">
+            <div class="sb-dossier-cert-meta">
+              <span class="sb-dossier-issuer">FINRA Regulated &bull; Washington, D.C.</span>
+              <span class="sb-dossier-status-pill">REGULATORY ESSENTIALS</span>
+            </div>
+            <h4 class="sb-dossier-cert-name">FINRA SIE&reg; &bull; Securities Industry Essentials</h4>
+            <p class="sb-dossier-cert-desc">
+              Foundational capital markets regulatory accreditation covering SEC registration frameworks (Reg D, Reg S, Rule 144), equity &amp; debt underwriting structures, insider trading regulations, prohibited conduct, customer account compliance, and Series 79 pathway alignment.
+            </p>
+            <div class="sb-dossier-topic-tags">
+              <span class="sb-dossier-topic-tag">Capital Markets Regulation</span>
+              <span class="sb-dossier-topic-tag">SEC Reg D / S / 144 Exemptions</span>
+              <span class="sb-dossier-topic-tag">Securities Underwriting</span>
+              <span class="sb-dossier-topic-tag">FINRA Code of Conduct</span>
+              <span class="sb-dossier-topic-tag">Series 79 Pathway</span>
+            </div>
+          </div>
+          <div class="sb-dossier-cert-side">
+            <div>
+              <div class="sb-dossier-cert-id">CRD: SIE-2026-79</div>
+              <div style="font-family: var(--sb-font-mono); font-size: 10px; color:#10B981; font-weight:700; margin-top:3px;">● SERIES 79 PATHWAY</div>
+            </div>
+            <button type="button" class="sb-dossier-view-btn cg-cert-view-btn" data-cert-svg="assets/certificates/sie-cert.svg" data-cert-title="FINRA SIE&reg; Qualification — Praveen S">
+              <span>View Official Diploma</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+        <!-- Dossier Cert 5: Python for Quant Finance -->
+        <article class="sb-dossier-cert-box">
+          <div class="sb-dossier-cert-info">
+            <div class="sb-dossier-cert-meta">
+              <span class="sb-dossier-issuer">GARP / Computational Finance</span>
+              <span class="sb-dossier-status-pill">QUANT COMPUTING</span>
+            </div>
+            <h4 class="sb-dossier-cert-name">Python for Quant Finance (FRM&reg; Prep)</h4>
+            <p class="sb-dossier-cert-desc">
+              Statistical and stochastic quantitative engineering in Python 3.12. Includes Black-Scholes and Monte Carlo options valuation, parametric and historical Value-at-Risk (VaR), Expected Shortfall, Markowitz Mean-Variance portfolio optimization, and vectorized backtesting.
+            </p>
+            <div class="sb-dossier-topic-tags">
+              <span class="sb-dossier-topic-tag">Monte Carlo Option Pricing</span>
+              <span class="sb-dossier-topic-tag">Parametric &amp; Historical VaR</span>
+              <span class="sb-dossier-topic-tag">Markowitz Efficient Frontier</span>
+              <span class="sb-dossier-topic-tag">NumPy Vectorized Engines</span>
+              <span class="sb-dossier-topic-tag">Multi-Factor Regressions</span>
+            </div>
+          </div>
+          <div class="sb-dossier-cert-side">
+            <div>
+              <div class="sb-dossier-cert-id">KERNEL: PY-RISK-26</div>
+              <div style="font-family: var(--sb-font-mono); font-size: 10px; color:#10B981; font-weight:700; margin-top:3px;">● PYTHON 3.12 AUDITED</div>
+            </div>
+            <button type="button" class="sb-dossier-view-btn cg-cert-view-btn" data-cert-svg="assets/certificates/quant-cert.svg" data-cert-title="Python for Quant Finance — Praveen S">
+              <span>View Official Diploma</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Work Detail Popup Modal -->
+  <div class="ios-popup-backdrop" id="workPopupBackdrop" aria-hidden="true">
+    <div class="ios-popup-card" id="workPopupCard" role="dialog" aria-modal="true" aria-labelledby="popupWorkTitle">
+      <header class="ios-popup-top-nav">
+        <div class="ios-popup-nav-left">
+          <button class="ios-popup-back-btn" id="popupCloseBackBtn" aria-label="Close Case Study">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="m15 18-6-6 6-6"/></svg>
+            <span>Close</span>
+          </button>
+          <span class="ios-popup-nav-category" id="popupNavCategory">VALUATION MODEL</span>
+        </div>
+        <div class="ios-popup-nav-actions">
+          <button class="ios-popup-icon-btn" id="popupShareBtn" aria-label="Share">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="ios-popup-content-scroll">
+        <div class="ios-popup-header-block">
+          <div class="ios-popup-app-icon" id="popupIconBox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <div>
+            <div class="ios-popup-date-badge" id="popupDateBadge">AUDITED MODEL</div>
+            <h2 class="ios-popup-title" id="popupWorkTitle">Case Study Title</h2>
+          </div>
+        </div>
+
+        <div class="ios-popup-kpi-grid" id="popupKpiGrid"></div>
+
+        <section class="ios-popup-section">
+          <div class="ios-popup-section-title">EXECUTIVE OVERVIEW</div>
+          <div class="ios-popup-card-inset">
+            <p class="ios-popup-body-text" id="popupOverviewText"></p>
+          </div>
+        </section>
+
+        <section class="ios-popup-section">
+          <div class="ios-popup-section-title">KEY METHODOLOGY HIGHLIGHTS</div>
+          <div class="ios-popup-card-inset" id="popupHighlightsList"></div>
+        </section>
+
+        <section class="ios-popup-section">
+          <div class="ios-popup-section-title">TECHNICAL &amp; REGULATORY SPECS</div>
+          <div class="ios-popup-card-inset" id="popupSpecsList"></div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=sbResp1"></script>
+</body>
+</html>
+'@
+
+[System.IO.File]::WriteAllText("C:\Users\prave\.gemini\antigravity\scratch\ios-finance-portfolio\index.html", $htmlContent, [System.Text.Encoding]::UTF8)
+Write-Output "Successfully updated index.html with Starbase Minimalist theme!"
